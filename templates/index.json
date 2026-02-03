@@ -49,9 +49,118 @@
         "button_three_text": "Curtains",
         "button_three_link": ""
       }
+    },
+    "collection_grid_DetCqr": {
+      "type": "collection-grid",
+      "blocks": {
+        "collection_XVwXGK": {
+          "type": "collection",
+          "settings": {
+            "collection": "roller-blinds",
+            "custom_title": "Roller Blinds"
+          }
+        },
+        "collection_efjXEE": {
+          "type": "collection",
+          "settings": {
+            "collection": "vertical-blinds",
+            "custom_title": "Vertical Blinds"
+          }
+        },
+        "collection_dQ9rE6": {
+          "type": "collection",
+          "settings": {
+            "collection": "shutters",
+            "custom_title": ""
+          }
+        },
+        "collection_JdAqVE": {
+          "type": "collection",
+          "settings": {
+            "collection": "pleated-blinds",
+            "custom_title": "Pleated Blinds"
+          }
+        },
+        "collection_zHL7N7": {
+          "type": "collection",
+          "settings": {
+            "collection": "wood-blinds",
+            "custom_title": "Wooden Blinds"
+          }
+        },
+        "collection_EAWLWH": {
+          "type": "collection",
+          "settings": {
+            "collection": "day-night-blinds",
+            "custom_title": "Day & Night"
+          }
+        },
+        "collection_gVx7BJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "curtains",
+            "custom_title": ""
+          }
+        },
+        "collection_rda9i3": {
+          "type": "collection",
+          "settings": {
+            "collection": "roman-blinds",
+            "custom_title": "Roman Blinds"
+          }
+        },
+        "collection_ypx6cV": {
+          "type": "collection",
+          "settings": {
+            "collection": "perfect-fit-blinds",
+            "custom_title": "Perfect Fit Blinds"
+          }
+        },
+        "collection_kE7HJL": {
+          "type": "collection",
+          "settings": {
+            "collection": "venetians",
+            "custom_title": "Venetian Blinds"
+          }
+        },
+        "collection_T4K9Qa": {
+          "type": "collection",
+          "settings": {
+            "collection": "skylight-blinds",
+            "custom_title": "Skylight"
+          }
+        },
+        "collection_bQQzgC": {
+          "type": "collection",
+          "settings": {
+            "collection": "electric-blinds",
+            "custom_title": "Electric Blinds"
+          }
+        }
+      },
+      "block_order": [
+        "collection_XVwXGK",
+        "collection_efjXEE",
+        "collection_dQ9rE6",
+        "collection_JdAqVE",
+        "collection_zHL7N7",
+        "collection_EAWLWH",
+        "collection_gVx7BJ",
+        "collection_rda9i3",
+        "collection_ypx6cV",
+        "collection_kE7HJL",
+        "collection_T4K9Qa",
+        "collection_bQQzgC"
+      ],
+      "name": "Collection Grid",
+      "settings": {
+        "content_background_color": "#000000",
+        "content_text_color": "#ffffff"
+      }
     }
   },
   "order": [
-    "intro_banner_eeddTE"
+    "intro_banner_eeddTE",
+    "collection_grid_DetCqr"
   ]
 }
