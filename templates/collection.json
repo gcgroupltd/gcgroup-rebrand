@@ -1,10 +1,88 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
-      "type": "collection-header"
+      "type": "collection-header",
+      "settings": {}
+    },
+    "how_it_works_down_DerEQj": {
+      "type": "how-it-works-down",
+      "name": "How it works down",
+      "settings": {
+        "background_color": "#CAD4CB"
+      }
+    },
+    "window_inspiration_Lmwmeg": {
+      "type": "window-inspiration",
+      "name": "Window Inspiration",
+      "settings": {
+        "heading": "Window Inspiration",
+        "subheading": "We've plenty of fabulous ideas to get your next project started",
+        "background_color": "#FFFFFF"
+      }
+    },
+    "bullet_list_columns_8YCUnA": {
+      "type": "bullet-list-columns",
+      "name": "Bullet List Columns",
+      "settings": {
+        "heading": "What we say about blinds",
+        "background_color": "#FFFFFF"
+      }
+    },
+    "testimonial_slider_rYPhEQ": {
+      "type": "testimonial-slider",
+      "name": "Testimonial Slider",
+      "settings": {
+        "background_color": "#e3cfbf"
+      }
+    },
+    "appointment_highight_RpDrYX": {
+      "type": "appointment-highight",
+      "name": "Appointment Highlight",
+      "settings": {
+        "background_color": "#deced1"
+      }
+    },
+    "get_to_know_CJ4QQ8": {
+      "type": "get-to-know",
+      "name": "Get to know",
+      "settings": {
+        "data": "collection",
+        "background_color": "#e8e9ea",
+        "title": "Get to know us"
+      }
+    },
+    "newsletter_K4wnEE": {
+      "type": "newsletter",
+      "blocks": {
+        "email_form_BcqTpg": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "email_form_BcqTpg"
+      ],
+      "name": "Newsletter",
+      "settings": {}
     }
   },
   "order": [
     "main",
+    "how_it_works_down_DerEQj",
+    "window_inspiration_Lmwmeg",
+    "bullet_list_columns_8YCUnA",
+    "testimonial_slider_rYPhEQ",
+    "appointment_highight_RpDrYX",
+    "get_to_know_CJ4QQ8",
+    "newsletter_K4wnEE"
   ]
 }
