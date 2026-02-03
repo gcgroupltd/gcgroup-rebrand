@@ -171,12 +171,22 @@
       "settings": {
         "background_color": "#deced1"
       }
+    },
+    "get_to_know_WyLBGT": {
+      "type": "get-to-know",
+      "name": "Get to know",
+      "settings": {
+        "data": "general",
+        "background_color": "#e8e9ea",
+        "title": "Get to know Goldcrest Blinds"
+      }
     }
   },
   "order": [
     "intro_banner_eeddTE",
     "collection_grid_DetCqr",
     "testimonial_slider_fVxhV6",
-    "appointment_highight_hCKgzi"
+    "appointment_highight_hCKgzi",
+    "get_to_know_WyLBGT"
   ]
 }
