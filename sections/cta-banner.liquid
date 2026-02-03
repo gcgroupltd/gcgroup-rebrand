@@ -1,0 +1,39 @@
+<section class="cta-banner">
+  <a href="{{section.settings.cta_link}}" class="cta-banner__link">
+    <p class="cta-banner__text">{{ section.settings.cta_text }}</p>
+  </a>
+</section>
+
+<style>
+  .cta-banner {
+    background-color: {{ section.settings.background_color }};
+  }
+  .cta-banner:hover {
+    background-color: color-mix(in srgb, {{ section.settings.background_color }} 100%, #000 20%);
+  }
+</style>
+
+{% schema %}
+{
+  "name": "CTA Banner",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ff0000"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Text",
+      "default": "Call to Action Banner"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Link"
+    }
+  ]
+}
+{% endschema %}

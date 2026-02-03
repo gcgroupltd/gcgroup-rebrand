@@ -1,0 +1,45 @@
+.newsletter {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    align-items: stretch;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        background: black;
+        height: 100%;
+        widtH: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.25
+    }
+
+    .standard-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+
+        color: white;
+    }
+
+    &__image {
+        widtH: 100%;
+        margin: 0 0 0 auto;
+
+        @media screen and (min-width: 860px) {
+            widtH: 50%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

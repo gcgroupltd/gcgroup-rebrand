@@ -1,0 +1,228 @@
+[
+  {
+    "name": "Contact Information",
+    "settings": [
+      {
+        "type": "text",
+        "id": "contact_phone",
+        "label": "Contact Phone Number",
+        "default": "01224 662 884"
+      }
+    ]
+  },
+  {
+    "name": "Opening Times",
+    "settings": [
+      {
+        "type": "text",
+        "id": "opening_weekdays",
+        "label": "Opening Times - Weekdays",
+        "default": "8am - 5pm"
+      },
+      {
+        "type": "text",
+        "id": "opening_saturday",
+        "label": "Opening Times - Saturday",
+        "default": "Closed"
+      },
+      {
+        "type": "text",
+        "id": "opening_sunday",
+        "label": "Opening Times - Sunday",
+        "default": "Closed"
+      }
+    ]
+  },
+  {
+    "name": "Testimonial Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "rating_text",
+        "label": "Rating Text",
+        "default": "Rated Excellent"
+      },
+      {
+        "type": "text",
+        "id": "stars_text",
+        "label": "Stars Text",
+        "default": "4.5 based on X reviews"
+      },
+      {
+        "type": "url",
+        "id": "stars_link",
+        "label": "Stars Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "testimonial_image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "testimonial_button_text",
+        "label": "Button Text",
+        "default": "See our Reviews"
+      },
+      {
+        "type": "url",
+        "id": "testimonial_button_link",
+        "label": "Button Link"
+      }
+    ]
+  },
+  {
+    "name": "Appointment Highlight",
+    "settings": [
+      {
+        "type": "text",
+        "id": "appointment_title",
+        "label": "Appointment Highlight Title",
+        "default": "The Right Fight, Every Time"
+      },
+      {
+        "type": "text",
+        "id": "appointment_content",
+        "label": "Appointment Highlight Content",
+        "default": "As the local experts in made-to-measure blinds, curtains, and shutters, we handle every detail. We ensure your items are perfectly tailored and installed, giving you a flawless result that's guaranteed to last."
+      },
+      {
+        "type": "text",
+        "id": "appointment_button_text",
+        "label": "Appointment Highlight Button Text",
+        "default": "Book Your Appointment"
+      },
+      {
+        "type": "url",
+        "id": "appointment_button_link",
+        "label": "Appointment Highlight Button Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "appointment_image",
+        "label": "Appointment Highlight Image"
+      }
+    ]
+  },
+  {
+    "name": "Get to know",
+    "settings": [
+      {
+        "type": "text",
+        "id": "get_to_know_title",
+        "label": "Get to know title",
+        "default": "Get to know us"
+      },
+    ]
+  },
+  {
+    "name": "How it works Flat Steps",
+    "settings": [
+      {
+        "type": "text",
+        "id": "how_it_works_flat_title",
+        "label": "How it works title",
+        "default": "How it Works"
+      },
+      {
+        "type": "text",
+        "id": "how_it_works_flat_subtitle",
+        "label": "How it works subtitle",
+        "default": "From first visit to final fit, here's our simple four-step process."
+      }
+    ]
+  },
+  {
+    "name": "Newsletter",
+    "settings": [
+      {
+        "type": "color",
+        "id": "newsletter_background",
+        "label": "Background Colour",
+        "default": "#b89454"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_title",
+        "label": "Newsletter Title",
+        "default": "Sign up to our newsletter"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_paragraph",
+        "label": "Newsletter Paragraph",
+        "default": "Enter your email address to receive updates on our latest collections, trends and exclusive offers."
+      },
+      {
+        "type": "text",
+        "id": "newsletter_email_placeholder",
+        "label": "Newsletter email placeholder",
+        "default": "Email address"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_button_text",
+        "label": "Newsletter button text",
+        "default": "Subscribe"
+      },
+      {
+        "type": "richtext",
+        "id": "newsletter_copy",
+        "label": "Final Copy Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "newsletter_image",
+        "label": "Newsletter Image"
+      }
+    ]
+  },
+  {
+    "name": "How it works down",
+    "settings": [
+      {
+        "type": "text",
+        "id": "how_it_works_down_title",
+        "label": "Title",
+        "default": "How it works"
+      },
+      {
+        "type": "text",
+        "id": "how_it_works_down_subheading",
+        "label": "Subheading",
+        "default": "From first visit to final fit, here's our simple four-step process."
+      },
+      {
+        "type": "image_picker",
+        "id": "how_it_works_down_image",
+        "label": "Image",
+      }
+    ]
+  },
+  {
+    "name": "Collection Header",
+    "settings": [
+      {
+        "type": "text",
+        "id": "collection_header_button_text",
+        "label": "Button Text",
+        "default": "Book your free appointment"
+      },
+      {
+        "type": "color",
+        "id": "collection_header_background_color",
+        "label": "Background Colour",
+        "default": "#b7bdcb"
+      }
+    ]
+  },
+  {
+    "name": "Site Defaults",
+    "settings": [{
+      "type": "color",
+      "id": "theme_color",
+      "label": "Theme Color",
+      "default": "#499dc1"
+    }]
+  }
+]

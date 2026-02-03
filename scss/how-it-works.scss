@@ -1,0 +1,23 @@
+.how-it-works {
+    padding: 40px 15px;
+
+    &__steps {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    &__step {
+        flex: 1;
+        padding: 20px;
+        border-radius: 8px;
+
+        h3 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+}

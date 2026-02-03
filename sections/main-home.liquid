@@ -1,0 +1,17 @@
+<section class="page">
+  <div class="page__inner">
+    <h1>{{ section.settings.heading }}</h1>
+    <div class="rte">{{ section.settings.content }}</div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Welcome" },
+    { "type": "richtext", "id": "content", "label": "Content", "default": "<p>Start building…</p>" }
+  ],
+  "presets": [{ "name": "Home" }]
+}
+{% endschema %}

@@ -1,0 +1,33 @@
+<section class="appointment-highlight">
+  <div class="small-container" style="background-color: {{ section.settings.background_color }}">
+    <div class="appointment-highlight__content">
+      <h2>{{ settings.appointment_title }}</h2>
+      <p>{{ settings.appointment_content }}</p>
+      <a href="{{ settings.appointment_button_link }}" class="button button--black">
+        {{- settings.appointment_button_text -}}
+      </a>
+    </div>
+    <div class="appointment-highlight__image">
+      <img src="{{ settings.appointment_image | img_url: 'large' }}" alt="Appointment Highlight">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Appointment Highlight",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#deced1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Appointment Highlight"
+    }
+  ]
+}
+{% endschema %}

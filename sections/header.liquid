@@ -1,0 +1,225 @@
+<header class="header" style="background-color: {{ section.settings.background_color }}">
+  <div class="standard-container">
+    <a href="{{ shop.url }}" class="header__logo">
+      <img src="{{ section.settings.logo | img_url: 'small' }}" alt="">
+    </a>
+    <div class="header__ctas">
+      <a href="tel:{{ settings.contact_phone }}" class="header__ctas__phone">
+        {% assign today = 'now' | date: '%A' %}
+        {% assign opening_time = settings.opening_weekdays %}
+
+        {% if today == 'Saturday' %}
+          {% assign opening_time = settings.opening_saturday %}
+        {% elsif today == 'Sunday' %}
+          {% assign opening_time = settings.opening_sunday %}
+        {% endif %}
+        <p>Call today: {{ opening_time }}</p>
+        <p>{{ settings.contact_phone }}</p>
+      </a>
+
+      <a href="{{ section.settings.button_url }}" class="header__ctas__button button button--white">
+        {{- section.settings.button_text -}}
+      </a>
+    </div>
+  </div>
+
+  <div id="nav-toggle" class="standard-container" style="color: white">
+    {{- 'icon-hamburger.svg' | inline_asset_content -}}
+    {{- 'icon-close.svg' | inline_asset_content -}}
+  </div>
+
+  <div class="mobile-nav-wrapper" style="background-color: {{ section.settings.background_color }}">
+    <nav class="standard-container main-nav">
+      <ul class="menu-root">
+        {% for link in section.settings.main_nav.links %}
+          <li class="menu-item">
+            {% if link.links != blank %}
+              <div class="mega-menu">
+                <!-- Top level trigger -->
+                <button class="mega-menu__top menu-trigger">
+                  <span
+                    {% if link.child_active %}
+                      class="header__active-menu-item"
+                    {% endif %}
+                  >
+                    {{ link.title | escape }}
+                  </span>
+                  {{ 'icon-caret.svg' | inline_asset_content }}
+                </button>
+
+                <!-- Level 2 panel -->
+                <div
+                  class="mega-menu__content"
+                  style="background-color: {{ section.settings.background_color }};"
+                >
+                  <div class="menu-panel standard-container">
+                    <button class="menu-back">← {{ link.title }}</button>
+
+                    <ul class="menu-level">
+                      {% for childlink in link.links %}
+                        <li>
+                          {% if childlink.links != blank %}
+                            <button class="menu-trigger">
+                              <span>
+                                {{ childlink.title | escape }}
+                              </span>
+                              {{ 'icon-caret.svg' | inline_asset_content }}
+                            </button>
+
+                            <!-- Level 3 panel -->
+                            <div
+                              class="menu-panel"
+                              style="background-color: {{ section.settings.background_color }};"
+                            >
+                              <button class="menu-back">← {{ childlink.title }}</button>
+
+                              <ul class="menu-level">
+                                {% for grandchildlink in childlink.links %}
+                                  <li>
+                                    {% if grandchildlink.object.metafields.custom.icon %}
+                                      <img
+                                        src="{{ grandchildlink.object.metafields.custom.icon | img_url: 'medium' }}"
+                                        width="32"
+                                        height="32"
+                                        alt=""
+                                      >
+                                    {% endif %}
+
+                                    <a href="{{ grandchildlink.url }}">
+                                      {{ grandchildlink.title | escape }}
+                                    </a>
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                            </div>
+                          {% else %}
+                            <a href="{{ childlink.url }}">
+                              {{ childlink.title | escape }}
+                            </a>
+                          {% endif %}
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            {% else %}
+              <a href="{{ link.url }}">
+                {{ link.title | escape }}
+              </a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Request Your Free Appointment"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "link_list",
+      "id": "main_nav",
+      "label": "Main Navigation Menu",
+      "default": "main-menu"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('nav-toggle');
+    const mobileWrapper = document.querySelector('.mobile-nav-wrapper');
+
+    // Show/hide menu
+    toggle.addEventListener('click', () => {
+      mobileWrapper.classList.toggle('active');
+      toggle.classList.toggle('open');
+
+      // Optional: close all open panels when menu closes
+      if (!mobileWrapper.classList.contains('active')) {
+        mobileWrapper
+          .querySelectorAll('.mega-menu__content.active, .menu-panel.active')
+          .forEach((panel) => panel.classList.remove('active'));
+      }
+    });
+
+    // =========================
+    // Mobile drill-down logic
+    // =========================
+    const setupMobileMenu = () => {
+      if (window.innerWidth > 768) return;
+
+      // Level 1 → Level 2
+      mobileWrapper.querySelectorAll('.mega-menu__top').forEach((button) => {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          const megaMenu = button.closest('.mega-menu');
+          const level2 = megaMenu.querySelector('.mega-menu__content');
+          if (level2) level2.classList.add('active');
+        });
+      });
+
+      // Level 2 → Level 3
+      mobileWrapper.querySelectorAll('.menu-level > li > .menu-trigger').forEach((button) => {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          const level3 = button.nextElementSibling;
+          if (level3 && level3.classList.contains('menu-panel')) {
+            level3.classList.add('active');
+          }
+        });
+      });
+
+      // Back buttons
+      mobileWrapper.querySelectorAll('.menu-back').forEach((button) => {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          const panel = button.closest('.menu-panel');
+          const isLevel2 = panel && panel.parentElement.classList.contains('mega-menu__content');
+
+          if (isLevel2) {
+            const megaContent = button.closest('.mega-menu__content');
+            megaContent.classList.remove('active');
+            megaContent.querySelectorAll('.menu-panel.active').forEach((p) => p.classList.remove('active'));
+          } else if (panel) {
+            panel.classList.remove('active');
+          }
+        });
+      });
+    };
+
+    // Initialize mobile menu after DOM ready
+    setupMobileMenu();
+
+    // Optional: re-setup on window resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth <= 768) setupMobileMenu();
+    });
+  });
+</script>

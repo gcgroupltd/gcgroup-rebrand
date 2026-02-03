@@ -1,0 +1,169 @@
+<section class="intro-banner">
+  <div class="standard-container">
+    <div class="intro-banner__images">
+      {% if collection %}
+        <div class="intro-banner__image" style="opacity: 1;">
+          <img src="{{ collection.image | img_url: 'large' }}" alt="">
+        </div>
+      {% else %}
+        {% for block in section.blocks %}
+          <div class="intro-banner__image{% if forloop.first %} is-active{% endif %}">
+            <img src="{{ block.settings.image | img_url: 'large' }}" alt="">
+          </div>
+        {% endfor %}
+        <div class="intro-banner__dots">
+          {% for block in section.blocks %}
+            <button
+              class="intro-banner__dot{% if forloop.first %} is-active{% endif %}"
+              data-slide="{{ forloop.index0 }}"
+              aria-label="Go to slide {{ forloop.index }}"
+            ></button>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="intro-banner__content" style="background-color: {{ section.settings.background_color }}">
+      <div class="intro-banner__content__container" style="color: {{ section.settings.text_color }}">
+        {% if collection %}
+          <h1>{{ collection.title }}</h1>
+          <p>{{ collection.description }}</p>
+        {% else %}
+          <h1>{{ section.settings.heading }}</h1>
+          <p>{{ section.settings.content }}</p>
+        {% endif %}
+        <div class="intro-banner__buttons">
+          {% if section.settings.button_one_text %}
+            <a href="{{ section.settings.button_one_link }}" class="button button--white">
+              {{- section.settings.button_one_text -}}
+            </a>
+          {% endif %}
+          {% if section.settings.button_two_text %}
+            <a href="{{ section.settings.button_two_link }}" class="button button--white">
+              {{- section.settings.button_two_text -}}
+            </a>
+          {% endif %}
+          {% if section.settings.button_three_text %}
+            <a href="{{ section.settings.button_three_link }}" class="button button--white">
+              {{- section.settings.button_three_text -}}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Intro Banner",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f6f6f6"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Sale now on"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "button_one_text",
+      "label": "Button One Text",
+      "default": "Blinds"
+    },
+    {
+      "type": "url",
+      "id": "button_one_link",
+      "label": "Button One Link"
+    },
+    {
+      "type": "text",
+      "id": "button_two_text",
+      "label": "Button Two Text",
+      "default": "Shutters"
+    },
+    {
+      "type": "url",
+      "id": "button_two_link",
+      "label": "Button Two Link"
+    },
+    {
+      "type": "text",
+      "id": "button_three_text",
+      "label": "Button Three Text",
+      "default": "Curtains"
+    },
+    {
+      "type": "url",
+      "id": "button_three_link",
+      "label": "Button Three Link"
+    }
+  ],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Intro Banner" }]
+}
+{% endschema %}
+
+{% if collection %}
+{% else %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slideshow = document.querySelector('.intro-banner__images');
+      if (!slideshow) return;
+
+      const slides = slideshow.querySelectorAll('.intro-banner__image');
+      const dots = document.querySelectorAll('.intro-banner__dot');
+      let current = 0;
+
+      function goToSlide(index) {
+        slides[current].classList.remove('is-active');
+        dots[current].classList.remove('is-active');
+
+        current = index;
+
+        slides[current].classList.add('is-active');
+        dots[current].classList.add('is-active');
+      }
+
+      // Auto-play
+      setInterval(() => {
+        goToSlide((current + 1) % slides.length);
+      }, 4000);
+
+      // Dot click
+      dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+          goToSlide(parseInt(dot.dataset.slide, 10));
+        });
+      });
+    });
+  </script>
+{% endif %}

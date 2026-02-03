@@ -1,0 +1,66 @@
+.what-to-do-next {
+    padding: 40px 15px;
+
+    &__head {
+        width: 100%;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        align-items: stretch;
+
+        @media screen and (min-width: 860px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__card {
+        background-color: white;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        overflow: hidden;
+        border-radius: 8px;
+
+        &__content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        &__image {
+            height: clamp(100px, 22vw, 260px);
+            min-height: 300px;
+
+            @media screen and (min-width: 860px) {
+                min-height: auto;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: auto;
+            width: fit-content;
+        }
+    }
+}

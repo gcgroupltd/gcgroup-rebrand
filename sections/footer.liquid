@@ -1,0 +1,81 @@
+<section class="footer" style="background-color: {{ section.settings.background_color }}">
+  <div class="standard-container">
+    <div class="footer__column">
+      <h2>{{ section.settings.col_1_title }}</h2>
+      <ul>
+        {% for link in linklists[section.settings.col_1_menu].links %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer__column">
+      <h2>{{ section.settings.col_2_title }}</h2>
+      <ul>
+        {% for link in linklists[section.settings.col_2_menu].links %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer__column">
+      <h2>{{ section.settings.col_3_title }}</h2>
+      <ul>
+        {% for link in linklists[section.settings.col_3_menu].links %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "col_1_title",
+      "label": "Column 1 Title",
+      "default": "Grampian Blinds"
+    },
+    {
+      "type": "link_list",
+      "id": "col_1_menu",
+      "label": "Column 1 Menu"
+    },
+    {
+      "type": "text",
+      "id": "col_2_title",
+      "label": "Column 2 Title",
+      "default": "Our Offering"
+    },
+    {
+      "type": "link_list",
+      "id": "col_2_menu",
+      "label": "Column 2 Menu"
+    },
+    {
+      "type": "text",
+      "id": "col_3_title",
+      "label": "Column 3 Title",
+      "default": "Get in Touch"
+    },
+    {
+      "type": "link_list",
+      "id": "col_3_menu",
+      "label": "Column 3 Menu"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,78 @@
+<section class="collection-grid">
+  <div class="standard-container">
+    <div class="collection-grid__grid">
+      {% for block in section.blocks %}
+        {% assign collection = block.settings.collection %}
+        {% if collection %}
+          <a href="{{ collection.url }}" class="collection-grid__item">
+            <div class="collection-grid__item__background">
+              {% if block.settings.custom_image %}
+                <img src="{{ block.settings.custom_image | img_url: 'large' }}" alt="{{ collection.title }}">
+              {% else %}
+                <img src="{{ collection.image | img_url: 'large' }}" alt="{{ collection.title }}">
+              {% endif %}
+            </div>
+            <div
+              class="collection-grid__item__content"
+              style="background-color: {{ section.settings.content_background_color }}  ; color: {{ section.settings.content_text_color }}; "
+            >
+              {% if block.settings.custom_title != blank %}
+                <p>{{ block.settings.custom_title }}</p>
+              {% else %}
+                <p>{{ collection.title }}</p>
+              {% endif %}
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection Grid",
+  "settings": [
+    {
+      "type": "color",
+      "id": "content_background_color",
+      "label": "Content Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "content_text_color",
+      "label": "Content Text Color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
+        },
+        {
+          "type": "text",
+          "id": "custom_title",
+          "label": "Custom Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Grid"
+    }
+  ]
+}
+{% endschema %}

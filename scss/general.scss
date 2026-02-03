@@ -1,0 +1,98 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "polymath-display", sans-serif;
+}
+
+.large-container {
+    max-width: 1540px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.standard-container {
+    max-width: 1430px;
+    margin: 0 auto;
+}
+
+.small-container {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.button {
+    border-radius: 50px;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 20px;
+    transition: all 0.25s ease-in-out;
+
+    &--white {
+        background: #ffffff;
+        color: #000000;
+
+        &:hover {
+            background-color: color-mix(in srgb, #fff 100%, #000 20%);
+        }
+    }
+
+    &--transparent {
+        background: transparent;
+        color: #000000;
+        border: 2px solid #000;
+
+        
+        &:hover {
+            cursor: pointer;
+            background-color: color-mix(in srgb, transparent 100%, #000 20%);
+        }
+    }
+
+    &--black {
+        background: #000000;
+        color: #ffffff;
+
+        &:hover {
+            background-color: color-mix(in srgb, #000 100%, #fff 20%);
+        }
+    }
+
+    &--square {
+        border-radius: 0;
+        height: 40px;
+        width:40px;
+        padding: 0;
+        font-size: 18px;
+        border: 1px solid var(--theme-color);
+        background: white;
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background-color: color-mix(in srgb, #fff 100%, var(--theme-color) 10%);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+.cta-banner {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    transition: all 0.25s ease-in-out;
+
+    a {
+        text-decoration: none;
+        color: white;
+
+        p {
+            margin: 0;
+            font-size: 24px;
+        }
+    }
+}

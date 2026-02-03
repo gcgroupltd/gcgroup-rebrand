@@ -1,0 +1,31 @@
+<section class="intro-banner">
+  <div class="standard-container">
+    <div class="intro-banner__images">
+      <div class="intro-banner__image" style="opacity: 1;">
+        <img src="{{ collection.image | img_url: 'large' }}" alt="">
+      </div>
+    </div>
+    <div class="intro-banner__content" style="background-color: {{ settings.collection_header_background_color }}">
+      <div class="intro-banner__content__container">
+        <h1>{{ collection.title }}</h1>
+        {{ collection.description }}
+        <div class="intro-banner__buttons">
+          <a href="{{ section.settings.button_one_link }}" class="button button--black">
+            {{- settings.collection_header_button_text -}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection Header",
+  "presets": [
+    {
+      "name": "Collection Header"
+    }
+  ]
+}
+{% endschema %}

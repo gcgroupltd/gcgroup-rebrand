@@ -1,0 +1,175 @@
+{% assign slides = '' | split: ',' %}
+{% assign get_to_know_count = 0 %}
+
+{% if section.settings.data == 'general' %}
+  {% assign slides = shop.metaobjects.get_to_know_slides.values | sort: 'created_at' | reverse %}
+  {% assign get_to_know_count = slides.size %}
+{% else %}
+  {% assign main_menu = linklists['main-menu'].links %}
+  {% assign current_category = null %}
+
+  {% for category in main_menu %}
+    {% for sublink in category.links %}
+      {% for child in sublink.links %}
+        {% if child.type == 'collection_link' and child.object.handle == collection.handle %}
+          {% assign current_category = category %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+
+  {% if current_category %}
+    {% for sublink in current_category.links %}
+      {% for child in sublink.links %}
+        {% if child.type == 'collection_link' and child.object %}
+          {% assign temp_array = child.object.handle | split: ',' %}
+
+          {% for handle in temp_array %}
+            {% if handle != collection.handle %}
+              {% assign slides = slides | concat: temp_array %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+
+  {% assign get_to_know_count = slides.size %}
+{% endif %}
+
+<section class="get-to-know" style="background-color: {{ section.settings.background_color }}">
+  <div class="standard-container">
+    <div class="get-to-know__head">
+      <h2>{{ section.settings.title }}</h2>
+
+      {% comment %} {% if get_to_know_count > 3 %} {% endcomment %}
+      <div class="get-to-know__buttons">
+        <button class="button button--square get-to-know__button--prev">←</button>
+        <button class="button button--square get-to-know__button--next">→</button>
+      </div>
+      {% comment %} {% endif %} {% endcomment %}
+    </div>
+    <div class="get-to-know__slider">
+      <div class="get-to-know__track">
+        {% for s in slides %}
+          {% assign collection_obj = collections[s] %}
+
+          <div class="get-to-know__slide">
+            <div class="get-to-know__slide__image">
+              {% if collection_obj.image %}
+                <img
+                  src="{{ collection_obj.image | img_url: 'large' }}"
+                  alt="{{ collection_obj.metafields.custom.collection_page_title }}"
+                >
+              {% else %}
+                <img src="{{ s.image | img_url: 'large' }}" alt="{{  s.title }}">
+              {% endif %}
+            </div>
+            <div class="get-to-know__slide__content">
+              {% if collection_obj %}
+                {% if collection_obj.metafields.custom.collection_page_title == blank %}
+                  <h3>{{ collection_obj.title }}</h3>
+                {% else %}
+                  <h3>{{ collection_obj.metafields.custom.collection_page_title }}</h3>
+                {% endif %}
+                <p>{{ collection_obj.metafields.custom.short_description }}</p>
+                <a href="{{ collection_obj.url }}">View {{ collection_obj.title }} </a>
+              {% else %}
+                <h3>{{ s.title }}</h3>
+                <p>{{ s.content }}</p>
+                <a href="{{ s.link_url }}">Learn More</a>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Get to Know",
+  "settings": [
+    {
+      "type": "select",
+      "id": "data",
+      "label": "Content data",
+      "options": [
+        {
+          "value": "general",
+          "label": "General Data"
+        },
+        {
+          "value": "collection",
+          "label": "Collection Data"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#e8e9ea"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Get to know us"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Get to know"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  document.querySelectorAll('.get-to-know').forEach((section) => {
+    const slider = section.querySelector('.get-to-know__slider');
+    const track = section.querySelector('.get-to-know__track');
+    const slides = section.querySelectorAll('.get-to-know__slide');
+    const prevBtn = section.querySelector('.get-to-know__button--prev');
+    const nextBtn = section.querySelector('.get-to-know__button--next');
+
+    if (!track || !slides.length) return;
+
+    let index = 0;
+    let visibleSlides = 1;
+    let slideStep = 100;
+    let maxIndex = 0;
+
+    function calculate() {
+      const sliderWidth = slider.offsetWidth;
+      const slideWidth = slides[0].offsetWidth;
+
+      visibleSlides = sliderWidth / slideWidth;
+      slideStep = 100 / visibleSlides;
+      maxIndex = Math.max(slides.length - visibleSlides, 0);
+
+      index = Math.min(index, maxIndex);
+      updateSlider();
+    }
+
+    function updateSlider() {
+      track.style.transform = `translateX(-${index * slideStep}%)`;
+    }
+
+    nextBtn?.addEventListener('click', () => {
+      index = Math.min(index + 1, maxIndex);
+      updateSlider();
+    });
+
+    prevBtn?.addEventListener('click', () => {
+      index = Math.max(index - 1, 0);
+      updateSlider();
+    });
+
+    window.addEventListener('resize', calculate);
+
+    calculate(); // initial run
+  });
+</script>

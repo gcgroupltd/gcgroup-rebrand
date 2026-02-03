@@ -1,0 +1,44 @@
+{% assign sections = shop.metaobjects.what_to_do_next_items.values | sort: 'created_at' | reverse %}
+
+<section class="what-to-do-next" style="background-color: {{ section.settings.background_color }}">
+  <div class="standard-container">
+    <div class="what-to-do-next__head">
+      <h2>What to do next</h2>
+    </div>
+    <div class="what-to-do-next__content">
+      {% for s in sections %}
+        <div class="what-to-do-next__card">
+          <div class="what-to-do-next__card__image">
+            <img src="{{ s.image | img_url: 'large' }}" alt="{{ s.title }}">
+          </div>
+          <div class="what-to-do-next__card__content">
+            <h3>{{ s.title }}</h3>
+            <p>{{ s.content }}</p>
+            <a href="{{ s.button_link.value.url }}" class="button button--transparent">
+              {{- s.button_link.value.text -}}
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "What to do next",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#cad4cb"
+    }
+  ],
+  "presets": [
+    {
+      "name": "What to do next"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,36 @@
+{% assign how-it-works_count = shop.metaobjects.how_it_works_steps.values.size %}
+{% assign slides = shop.metaobjects.how_it_works_steps.values | sort: 'created_at' %}
+
+<section class="how-it-works">
+  <div class="standard-container">
+    <h2 class="how-it-works__title">{{ settings.how_it_works_flat_title }}</h2>
+    <p class="how-it-works__subheading">{{ settings.how_it_works_flat_subtitle }}</p>
+    <div class="how-it-works__steps">
+      {% for s in slides %}
+        <div class="how-it-works__step" style="background-color: {{ section.settings.step_color }};">
+          <div class="how-it-works__step__number">{{ s.step_number }}</div>
+          <h3 class="how-it-works__step__title">{{ s.title }}</h3>
+          <p class="how-it-works__step__description">{{ s.content }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "How It Works",
+  "settings": [
+    {
+      "type": "color",
+      "id": "step_color",
+      "label": "Step Background Color",
+      "default": "#e8e9ea"
+    }
+  ],
+  "presets": [
+    {
+      "name": "How It Works"
+    }
+  ]
+}
+{% endschema %}

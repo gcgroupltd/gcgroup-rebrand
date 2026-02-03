@@ -1,0 +1,90 @@
+{% assign testimonial_count = shop.metaobjects.testimonials.values.size %}
+
+<section class="testimonial-slider">
+  <div class="large-container" style="background-color: {{ section.settings.background_color }}">
+    <div class="standard-container">
+      <div class="testimonial-slider__testimonials">
+        <div class="testimonial-slider__testimonials__head">
+          <p>{{ settings.rating_text }} |</p>
+          <a href="{{ settings.stars_link }}">{{ settings.stars_text }}</a>
+        </div>
+        <div class="testimonial-slider__testimonials__slider">
+          <div class="testimonial-slider__track">
+            {% for t in shop.metaobjects.testimonials.values %}
+              <div class="testimonial-slider__slide">
+                <h3>{{ t.title }}</h3>
+                <p>{{ t.quote }}</p>
+                <p class="author">— {{ t.author }}</p>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="testimonial-slider__extras {% if testimonial_count > 1 %}multiple{% endif %}">
+          {% if testimonial_count > 1 %}
+            <div class="testimonial-slider__buttons">
+              <button class="testimonial-slider__button--prev button--square" aria-label="Previous">←</button>
+              <button class="testimonial-slider__button--next button--square" aria-label="Next">→</button>
+            </div>
+          {% endif %}
+          <a href="{{ settings.testimonial_button_url }}" class="button button--transparent">
+            {{- settings.testimonial_button_text -}}
+          </a>
+        </div>
+      </div>
+      <div class="testimonial-slider__image">
+        <img src="{{ settings.testimonial_image | img_url: 'large' }} }}" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonial Slider",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#e3cfbf"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Testimonial Slider"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  document.querySelectorAll('.testimonial-slider').forEach((section) => {
+    const track = section.querySelector('.testimonial-slider__track');
+    const slides = section.querySelectorAll('.testimonial-slider__slide');
+
+    if (slides.length > 1) {
+      const prevBtn = section.querySelector('.testimonial-slider__button--prev');
+      const nextBtn = section.querySelector('.testimonial-slider__button--next');
+
+      nextBtn.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        updateSlider();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        updateSlider();
+      });
+    }
+
+    if (!track || slides.length === 0) return;
+
+    let index = 0;
+
+    function updateSlider() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+  });
+</script>
