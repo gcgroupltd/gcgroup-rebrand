@@ -157,10 +157,26 @@
         "content_background_color": "#000000",
         "content_text_color": "#ffffff"
       }
+    },
+    "testimonial_slider_fVxhV6": {
+      "type": "testimonial-slider",
+      "name": "Testimonial Slider",
+      "settings": {
+        "background_color": "#e3cfbf"
+      }
+    },
+    "appointment_highight_hCKgzi": {
+      "type": "appointment-highight",
+      "name": "Appointment Highlight",
+      "settings": {
+        "background_color": "#deced1"
+      }
     }
   },
   "order": [
     "intro_banner_eeddTE",
-    "collection_grid_DetCqr"
+    "collection_grid_DetCqr",
+    "testimonial_slider_fVxhV6",
+    "appointment_highight_hCKgzi"
   ]
 }
