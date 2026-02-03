@@ -1,0 +1,46 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "background_color": "#000000",
+          "logo": "shopify://shop_images/GC_Goldcrest_Horizontal_Reverse_RGB.svg",
+          "button_text": "Request Your Free Appointment",
+          "button_url": "https://book.goldcrest-blinds.co.uk/",
+          "main_nav": "main-menu"
+        }
+      },
+      "cta-banner": {
+        "type": "cta-banner",
+        "settings": {
+          "background_color": "#ff0000",
+          "cta_text": "Call to Action Banner",
+          "cta_link": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "background_color": "#000000",
+          "col_1_title": "Grampian Blinds",
+          "col_1_menu": "",
+          "col_2_title": "Our Offering",
+          "col_2_menu": "",
+          "col_3_title": "Get in Touch",
+          "col_3_menu": ""
+        }
+      }
+    },
+    "content_for_index": []
+  }
+}
