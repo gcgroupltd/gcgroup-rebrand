@@ -187,6 +187,27 @@
       "settings": {
         "step_color": "#e8e9ea"
       }
+    },
+    "what_to_do_next_D6yDFH": {
+      "type": "what-to-do-next",
+      "name": "What to do next",
+      "settings": {
+        "background_color": "#cad4cb"
+      }
+    },
+    "newsletter_MgYfrL": {
+      "type": "newsletter",
+      "blocks": {
+        "email_form_tGkAVU": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "email_form_tGkAVU"
+      ],
+      "name": "Newsletter",
+      "settings": {}
     }
   },
   "order": [
@@ -195,6 +216,8 @@
     "testimonial_slider_fVxhV6",
     "appointment_highight_hCKgzi",
     "get_to_know_WyLBGT",
-    "how_it_works_FcB36f"
+    "how_it_works_FcB36f",
+    "what_to_do_next_D6yDFH",
+    "newsletter_MgYfrL"
   ]
 }
