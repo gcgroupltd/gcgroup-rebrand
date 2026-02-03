@@ -9,3 +9,4 @@ ehthumbs.db
 Thumbs.db
 .shopify
 config/settings_data.json
+node_modules
