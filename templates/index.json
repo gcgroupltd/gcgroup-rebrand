@@ -180,6 +180,13 @@
         "background_color": "#e8e9ea",
         "title": "Get to know Goldcrest Blinds"
       }
+    },
+    "how_it_works_FcB36f": {
+      "type": "how-it-works",
+      "name": "How It Works",
+      "settings": {
+        "step_color": "#e8e9ea"
+      }
     }
   },
   "order": [
@@ -187,6 +194,7 @@
     "collection_grid_DetCqr",
     "testimonial_slider_fVxhV6",
     "appointment_highight_hCKgzi",
-    "get_to_know_WyLBGT"
+    "get_to_know_WyLBGT",
+    "how_it_works_FcB36f"
   ]
 }
