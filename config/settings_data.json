@@ -23,9 +23,9 @@
       "cta-banner": {
         "type": "cta-banner",
         "settings": {
-          "background_color": "#ff0000",
-          "cta_text": "Call to Action Banner",
-          "cta_link": ""
+          "background_color": "#de162a",
+          "cta_text": "Fall in Love With Your Blinds This February",
+          "cta_link": "https://book.goldcrest-blinds.co.uk/"
         }
       },
       "footer": {

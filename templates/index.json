@@ -1,6 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "main": { "type": "main-home" }
+    "intro_banner_eeddTE": {
+      "type": "intro-banner",
+      "blocks": {
+        "image_e7VMq7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_osc5r4osc5r4osc5.png"
+          }
+        },
+        "image_dkdd7n": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/arturo_porcelain.jpg"
+          }
+        },
+        "image_4VJV6W": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Montana_-_Pure_White_001_A_9ff13209-be4a-4c08-8f8c-0efd504af94d.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_e7VMq7",
+        "image_dkdd7n",
+        "image_4VJV6W"
+      ],
+      "name": "Intro Banner",
+      "settings": {
+        "background_color": "#de162a",
+        "text_color": "#ffffff",
+        "heading": "February Sale - Blinds You'll Love",
+        "content": "Treat your home to beautiful made-to-measure blinds. Book your appointment now and fall in love with a fresh new look.",
+        "button_one_text": "Blinds",
+        "button_one_link": "",
+        "button_two_text": "Shutters",
+        "button_two_link": "",
+        "button_three_text": "Curtains",
+        "button_three_link": ""
+      }
+    }
   },
-  "order": ["main"]
+  "order": [
+    "intro_banner_eeddTE"
+  ]
 }
