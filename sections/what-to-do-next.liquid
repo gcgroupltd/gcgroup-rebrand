@@ -1,4 +1,4 @@
-{% assign sections = shop.metaobjects.what_to_do_next_items.values | sort: 'created_at' | reverse %}
+{% assign sections = shop.metaobjects.what_to_do_next_items.values | sort: 'order' %}
 
 <section class="what-to-do-next" style="background-color: {{ section.settings.background_color }}">
   <div class="standard-container">
