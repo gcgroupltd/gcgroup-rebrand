@@ -7,7 +7,7 @@
     </div>
     <div class="intro-banner__content" style="background-color: {{ settings.collection_header_background_color }}">
       <div class="intro-banner__content__container">
-        <h1>{{ collection.title }}</h1>
+        <h1>{{ collection.metafields.custom.collection_page_title | default: collection.title }}</h1>
         {{ collection.description }}
         <div class="intro-banner__buttons">
           <a href="{{ section.settings.button_one_link }}" class="button button--black">
