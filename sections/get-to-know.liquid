@@ -138,28 +138,36 @@
     if (!track || !slides.length) return;
 
     let index = 0;
-    let visibleSlides = 1;
-    let slideStep = 100;
-    let maxIndex = 0;
+    let slideWidth = 0;
+    let gap = 0;
+    let maxTranslate = 0;
 
     function calculate() {
+      slideWidth = slides[0].offsetWidth;
+      gap = parseInt(getComputedStyle(track).gap) || 0;
+
+      const totalSlideWidth = slideWidth + gap;
+
       const sliderWidth = slider.offsetWidth;
-      const slideWidth = slides[0].offsetWidth;
+      const trackWidth = track.scrollWidth;
 
-      visibleSlides = sliderWidth / slideWidth;
-      slideStep = 100 / visibleSlides;
-      maxIndex = Math.max(slides.length - visibleSlides, 0);
+      maxTranslate = trackWidth - sliderWidth;
 
-      index = Math.min(index, maxIndex);
+      index = 0;
       updateSlider();
     }
 
     function updateSlider() {
-      track.style.transform = `translateX(-${index * slideStep}%)`;
+      let translateX = index * (slideWidth + gap);
+
+      // Prevent overscrolling
+      translateX = Math.min(translateX, maxTranslate);
+
+      track.style.transform = `translateX(-${translateX}px)`;
     }
 
     nextBtn?.addEventListener('click', () => {
-      index = Math.min(index + 1, maxIndex);
+      index++;
       updateSlider();
     });
 
@@ -170,6 +178,6 @@
 
     window.addEventListener('resize', calculate);
 
-    calculate(); // initial run
+    calculate();
   });
 </script>

@@ -224,5 +224,24 @@
       "label": "Theme Color",
       "default": "#499dc1"
     }]
+  },
+  {
+    "name": "Social Media",
+    "settings": [{
+      "type": "text",
+      "id": "facebook_url",
+      "label": "Facebook URL",
+    },
+    {
+      "type": "text",
+      "id": "instagram_url",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "text",
+      "id": "x_url",
+      "label": "X URL"
+    }
+  ]
   }
 ]
