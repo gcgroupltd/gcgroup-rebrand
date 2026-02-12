@@ -30,6 +30,24 @@
         {% endfor %}
       </ul>
     </div>
+
+    <div class="footer__socials">
+      {% if settings.facebook_url != blank %}
+        <a href="{{ settings.facebook_url }}" target="_blank">
+          {% include 'icons', icon: 'icon-facebook' %}
+        </a>
+      {% endif %}
+      {% if settings.instagram_url != blank %}
+        <a href="{{ settings.instagram_url }}" target="_blank">
+          {% include 'icons', icon: 'icon-instagram' %}
+        </a>
+      {% endif %}
+      {% if settings.x_url != blank %}
+        <a href="{{ settings.x_url }}" target="_blank">
+          {% include 'icons', icon: 'icon-x' %}
+        </a>
+      {% endif %}
+    </div>
   </div>
 </section>
 
