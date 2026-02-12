@@ -52,18 +52,14 @@
   <div class="standard-container">
     <div class="bullet-list-columns__header">
       <h2 class="bullet-list-columns__title">
-        <strong
-          >What we say about {{ collection.title | remove: 'Stirling' | remove: 'Newcastle' | remove: 'Aberdeen' -}}
-        </strong>
+        What we say about {{ collection.metafields.custom.collection_page_title | default: collection.title }}
       </h2>
     </div>
 
     <div class="bullet-list-columns__columns">
       <div class="bullet-list-columns__column">
         {%- if collection.metafields.custom.bullet_list_columns_col_1_title != blank -%}
-          <h3>
-            <strong>{{ collection.metafields.custom.bullet_list_columns_col_1_title }}</strong>
-          </h3>
+          <h3>{{ collection.metafields.custom.bullet_list_columns_col_1_title }}</h3>
         {%- endif -%}
 
         {%- assign bullets = collection.metafields.custom.bullet_list_columns_col_1
@@ -94,9 +90,7 @@
 
       <div class="bullet-list-columns__column">
         {%- if collection.metafields.custom.bullet_list_columns_col_2_title != blank -%}
-          <h3>
-            <strong>{{ collection.metafields.custom.bullet_list_columns_col_2_title }}</strong>
-          </h3>
+          <h3>{{ collection.metafields.custom.bullet_list_columns_col_2_title }}</h3>
         {%- endif -%}
 
         {%- assign bullets = collection.metafields.custom.bullet_list_columns_col_2
@@ -115,8 +109,8 @@
                   viewBox="0 0 24 24"
                   fill="none"
                 >
-                  <circle cx="12" cy="12" r="10" stroke="#9ba0a5" stroke-width="1"/>
-                  <path d="M16 9L11 14L8 11" stroke="#9ba0a5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="10" stroke="#499dc1" stroke-width="1"/>
+                  <path d="M16 9L11 14L8 11" stroke="#499dc1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <p>{{ bullet | strip }}</p>
               </li>

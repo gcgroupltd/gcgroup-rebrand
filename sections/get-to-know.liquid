@@ -73,7 +73,9 @@
                   <h3>{{ collection_obj.metafields.custom.collection_page_title }}</h3>
                 {% endif %}
                 <p>{{ collection_obj.metafields.custom.short_description }}</p>
-                <a href="{{ collection_obj.url }}">View {{ collection_obj.title }} </a>
+                <a href="{{ collection_obj.url }}"
+                  >View {{ collection_obj.metafields.custom.collection_page_title | default: collection_obj.title }}
+                </a>
               {% else %}
                 <h3>{{ s.title }}</h3>
                 <p>{{ s.content }}</p>
@@ -135,49 +137,48 @@
     const prevBtn = section.querySelector('.get-to-know__button--prev');
     const nextBtn = section.querySelector('.get-to-know__button--next');
 
-    if (!track || !slides.length) return;
+    if (!track || slides.length === 0) return;
 
-    let index = 0;
+    let currentTranslate = 0;
     let slideWidth = 0;
     let gap = 0;
     let maxTranslate = 0;
 
     function calculate() {
-      slideWidth = slides[0].offsetWidth;
+      slideWidth = slides[0].getBoundingClientRect().width;
       gap = parseInt(getComputedStyle(track).gap) || 0;
 
-      const totalSlideWidth = slideWidth + gap;
-
-      const sliderWidth = slider.offsetWidth;
+      const sliderWidth = slider.getBoundingClientRect().width;
       const trackWidth = track.scrollWidth;
 
-      maxTranslate = trackWidth - sliderWidth;
+      maxTranslate = Math.max(0, trackWidth - sliderWidth);
 
-      index = 0;
+      currentTranslate = 0;
       updateSlider();
     }
 
     function updateSlider() {
-      let translateX = index * (slideWidth + gap);
-
-      // Prevent overscrolling
-      translateX = Math.min(translateX, maxTranslate);
-
-      track.style.transform = `translateX(-${translateX}px)`;
+      currentTranslate = Math.max(0, Math.min(currentTranslate, maxTranslate));
+      track.style.transform = `translateX(-${currentTranslate}px)`;
     }
 
     nextBtn?.addEventListener('click', () => {
-      index++;
-      updateSlider();
+      if (currentTranslate < maxTranslate) {
+        currentTranslate += slideWidth + gap;
+        updateSlider();
+      }
     });
 
     prevBtn?.addEventListener('click', () => {
-      index = Math.max(index - 1, 0);
-      updateSlider();
+      if (currentTranslate > 0) {
+        currentTranslate -= slideWidth + gap;
+        updateSlider();
+      }
     });
 
     window.addEventListener('resize', calculate);
 
-    calculate();
+    // Wait for layout/images
+    window.addEventListener('load', calculate);
   });
 </script>
