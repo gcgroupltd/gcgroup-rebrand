@@ -3,18 +3,43 @@
     padding: 40px 15px;
   }
 
-  .main-page p {
+  .main-page h1 {
+    font-size: 62px;
+    line-height: 80px;
+  }
+
+  .main-page h2 {
+    font-size: 29px;
+  }
+
+  .main-page h3 {
+    font-size: 22px;
+  }
+
+  .main-page p,
+  .main-page a.link {
     font-size: 18px;
     line-height: 1.5;
+  }
+
+  .main-page a.link {
+    color: inherit;
+    text-decoration: underline;
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+
+  .main-page img {
+    max-width: 100%;
   }
 </style>
 
 <section class="main-page">
   <div class="small-container">
-    <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <h1>
       {{ page.metafields.custom.on_page_title | default: page.title | escape }}
     </h1>
-    <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div>
       {{ page.content }}
     </div>
   </div>
