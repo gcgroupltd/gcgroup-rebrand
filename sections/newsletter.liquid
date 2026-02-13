@@ -67,6 +67,10 @@
       color: #00af87;
     }
 
+    #shopify-section-{{ section.id }} .newsletter-form-fw__field-wrapper {
+      widtH: 100%;
+    }
+
     #shopify-section-{{ section.id }} .newsletter-form__field-wrapper .field {
       display: flex;
       align-items: center;
@@ -79,6 +83,7 @@
 
     #shopify-section-{{ section.id }} .newsletter-form-fw__field-wrapper input {
       background: white;
+      border-radius: 50px 0 0 50px;
     }
 
     #shopify-section-{{ section.id }} .newsletter-form__field-wrapper .field__input {
@@ -108,16 +113,16 @@
 
     .field__input:focus + .field__label,
   .field__input:not(:placeholder-shown) + .field__label {
-    top: 6px;
+    top: 4px;
     transform: translateY(0);
-    font-size: 1.2rem;
+    font-size: 10px;
     opacity: 0.8;
   }
 
 
     #shopify-section-{{ section.id }} .newsletter-form-fw__button {
       flex-shrink: 0;
-      border-radius: 0;
+      border-radius: 0 50px 50px 0;
       margin: 0;
       padding: 12px 20px;
     }
@@ -131,7 +136,6 @@
       margin-top: 15px;
       opacity: 0.8;
       color: inherit !important;
-      /* max-width is now controlled by the inner container */
     }
 
     #shopify-section-{{ section.id }} .newsletter-privacy-text-fw a {
@@ -191,28 +195,20 @@
       }
 
       #shopify-section-{{ section.id }} .newsletter-content-fw__inner {
-        text-align: center; /* Center text inside the container on mobile */
+        text-align: center;
+      margin: auto;
       }
     }
 
     input {
           -webkit-appearance: none;
       appearance: none;
-      /* background-color: rgb(var(--color-background));
-      color: rgb(var(--color-foreground));
-      font-family: var(--font-body-family);
-      font-style: var(--font-body-style);
-      font-weight: var(--font-body-weight); */
-      font-size: 1.6rem;
+      font-size: 17px;
       width: 100%;
       box-sizing: border-box;
-      /* transition: box-shadow var(--duration-short) ease;
-      border-radius: var(--inputs-radius);
-      height: 4.5rem;
-      min-height: calc(var(--inputs-border-width) * 2); */
-      /* min-width: calc(7rem + (var(--inputs-border-width) * 2)); */
       position: relative;
       border: 0;
+      padding: 16px 20px 0;
     }
 
     input::placeholder {
@@ -226,9 +222,9 @@
     }
 
     label {
-      font-size: 1.6rem;
-      left: 0;
-      top: 0;
+      font-size: 17px;
+      left: 20px;
+      top: 12px;
       margin-bottom: 0;
       pointer-events: none;
       position: absolute;
