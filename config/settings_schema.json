@@ -218,12 +218,25 @@
   },
   {
     "name": "Site Defaults",
-    "settings": [{
+    "settings": [
+      {
       "type": "color",
       "id": "theme_color",
       "label": "Theme Color",
       "default": "#499dc1"
-    }]
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon"
+      },
+      {
+        "type": "text",
+        "id": "google_tag_id",
+        "label": "Google Tag Manager ID",
+        "default": "GTM-XXXXXX"
+      }
+]
   },
   {
     "name": "Social Media",
