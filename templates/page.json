@@ -1,14 +1,118 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "reviews_and_ratings_mhUg9Q": {
+      "type": "reviews-and-ratings",
+      "blocks": {
+        "rating_tile_TMdHRc": {
+          "type": "rating_tile",
+          "settings": {
+            "tile_label": "Overall",
+            "tile_rating": "4.8",
+            "tile_reviews": "42 reviews"
+          }
+        },
+        "rating_tile_KgxYdx": {
+          "type": "rating_tile",
+          "settings": {
+            "tile_label": "Trustpilot",
+            "tile_rating": "4.8",
+            "tile_reviews": "42 reviews"
+          }
+        },
+        "rating_tile_KGH7xt": {
+          "type": "rating_tile",
+          "settings": {
+            "tile_label": "Google",
+            "tile_rating": "4.8",
+            "tile_reviews": "42 reviews"
+          }
+        },
+        "review_TMW9RK": {
+          "type": "review",
+          "settings": {
+            "name": "Customer name",
+            "review_date": "",
+            "body": "<p>Great experience — highly recommend.</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        },
+        "review_8yefqD": {
+          "type": "review",
+          "settings": {
+            "name": "Customer name",
+            "review_date": "",
+            "body": "<p>Great experience — highly recommend.</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        },
+        "review_wtUQmd": {
+          "type": "review",
+          "settings": {
+            "name": "Customer name",
+            "review_date": "",
+            "body": "<p>Great experience — highly recommend.</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        }
+      },
+      "block_order": [
+        "rating_tile_TMdHRc",
+        "rating_tile_KgxYdx",
+        "rating_tile_KGH7xt",
+        "review_TMW9RK",
+        "review_8yefqD",
+        "review_wtUQmd"
+      ],
+      "name": "Reviews & ratings",
+      "settings": {
+        "header_style": "tiles",
+        "foot_img_mode": "contain",
+        "single_headline": "4.8",
+        "single_subline": "42 reviews",
+        "foot_img_height_desktop": 180,
+        "foot_img_height_mobile": 140,
+        "foot_default_pos_x": 50,
+        "foot_default_pos_y": 50,
+        "tile_label_size": 14,
+        "tile_rating_size": 22,
+        "tile_reviews_size": 16,
+        "card_name_size": 18,
+        "card_date_size": 14,
+        "bg_color": "#f8f9fb",
+        "pad_y": 40,
+        "color_scheme": "default"
+      }
     },
     "newsletter": {
       "type": "newsletter",
+      "settings": {}
     }
   },
   "order": [
     "main",
+    "reviews_and_ratings_mhUg9Q",
     "newsletter"
   ]
 }
