@@ -74,21 +74,28 @@
                               <button class="menu-back">← {{ childlink.title }}</button>
 
                               <ul class="menu-level">
+                                <!-- Level 3 links -->
                                 {% for grandchildlink in childlink.links %}
-                                  <li>
-                                    {% if grandchildlink.object.metafields.custom.icon %}
-                                      <img
-                                        src="{{ grandchildlink.object.metafields.custom.icon | img_url: 'medium' }}"
-                                        width="32"
-                                        height="32"
-                                        alt=""
-                                      >
-                                    {% endif %}
+                                  <a href="{{ grandchildlink.url }}">
+                                    <li>
+                                      {% if grandchildlink.object.metafields.custom.icon_svg %}
+                                        {{ grandchildlink.object.metafields.custom.icon_svg }}
 
-                                    <a href="{{ grandchildlink.url }}">
+                                        <!-- inserting svg -->
+
+                                      {% elsif grandchildlink.object.metafields.custom.icon %}
+                                        <!-- showing image -->
+                                        <img
+                                          src="{{ grandchildlink.object.metafields.custom.icon | img_url: 'medium' }}"
+                                          width="32"
+                                          height="32"
+                                          alt=""
+                                        >
+                                      {% endif %}
+
                                       {{ grandchildlink.title | escape }}
-                                    </a>
-                                  </li>
+                                    </li>
+                                  </a>
                                 {% endfor %}
                               </ul>
                             </div>
