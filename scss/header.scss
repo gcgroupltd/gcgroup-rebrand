@@ -206,9 +206,9 @@
 
                 li {
                     @media screen and (min-width: 860px) {
-                        width: calc(50% - 15px);
                         align-items: flex-start;
                         padding-bottom: 0;
+                        width: calc(50% - 15px);
                     }
                 }
 
@@ -218,11 +218,32 @@
                     }
                 }
 
+                a {
+                    @media screen and (min-width: 860px) {
+                        width: calc(50% - 15px);
+                    }
+
+                    &:hover {
+                        @media screen and (min-width: 860px) {
+                            svg path[fill="#FFFFFF"] {
+                                fill: var(--theme-color);
+                            }
+                        }
+                    }
+
+                }
+
                 .menu-level li {
                     @media screen and (min-width: 860px) {
                         align-items: center;
                         display: flex;
                         flex-wrap: wrap;
+                    }
+
+                    svg {
+                        max-height: 32px;
+                        max-widtH: 32px;
+                        margin-right: 10px;
                     }
                 }
             }
