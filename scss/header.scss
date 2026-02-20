@@ -225,7 +225,7 @@
 
                     &:hover {
                         @media screen and (min-width: 860px) {
-                            svg path[fill="#FFFFFF"] {
+                            svg path[fill="#FFFFFF"], svg g path[fill="#FFFFFF"] {
                                 fill: var(--theme-color);
                             }
                         }
