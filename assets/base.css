@@ -289,7 +289,7 @@ body {
   }
 }
 @media screen and (min-width: 860px) {
-  .header .mega-menu__content .menu-panel .menu-level a:hover svg path[fill="#FFFFFF"] {
+  .header .mega-menu__content .menu-panel .menu-level a:hover svg path[fill="#FFFFFF"], .header .mega-menu__content .menu-panel .menu-level a:hover svg g path[fill="#FFFFFF"] {
     fill: var(--theme-color);
   }
 }
