@@ -76,8 +76,8 @@
                               <ul class="menu-level">
                                 <!-- Level 3 links -->
                                 {% for grandchildlink in childlink.links %}
-                                  <a href="{{ grandchildlink.url }}">
-                                    <li>
+                                  <li>
+                                    <a href="{{ grandchildlink.url }}">
                                       {% if grandchildlink.object.metafields.custom.icon_svg %}
                                         {{ grandchildlink.object.metafields.custom.icon_svg }}
 
@@ -94,8 +94,8 @@
                                       {% endif %}
 
                                       {{ grandchildlink.title | escape }}
-                                    </li>
-                                  </a>
+                                    </a>
+                                  </li>
                                 {% endfor %}
                               </ul>
                             </div>
