@@ -3,6 +3,9 @@ body {
   margin: 0;
   font-family: "polymath-display", sans-serif;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 .large-container {
   max-width: 1540px;
@@ -283,13 +286,11 @@ body {
     margin-right: 10px;
   }
 }
-@media screen and (min-width: 860px) {
-  .header .mega-menu__content .menu-panel .menu-level a {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+.header .mega-menu__content .menu-panel .menu-level a {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 @media screen and (min-width: 860px) {
   .header .mega-menu__content .menu-panel .menu-level a:hover svg path[fill="#FFFFFF"], .header .mega-menu__content .menu-panel .menu-level a:hover svg g path[fill="#FFFFFF"], .header .mega-menu__content .menu-panel .menu-level a:hover svg path[fill="#ffffff"], .header .mega-menu__content .menu-panel .menu-level a:hover svg g path[fill="#FFFFFF"] {
