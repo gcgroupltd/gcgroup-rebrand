@@ -162,11 +162,13 @@
   document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('nav-toggle');
     const mobileWrapper = document.querySelector('.mobile-nav-wrapper');
+    let body = document.body;
 
     // Show/hide menu
     toggle.addEventListener('click', () => {
       mobileWrapper.classList.toggle('active');
       toggle.classList.toggle('open');
+      body.classList.toggle('no-scroll');
 
       // Optional: close all open panels when menu closes
       if (!mobileWrapper.classList.contains('active')) {
