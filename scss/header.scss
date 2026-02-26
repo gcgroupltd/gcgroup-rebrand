@@ -241,12 +241,18 @@
                         align-items: center;
                         display: flex;
                         flex-wrap: wrap;
+                        margin-bottom: 5px;
                     }
 
                     svg {
                         max-height: 32px;
                         max-widtH: 32px;
                         margin-right: 10px;
+
+                        @media screen and (min-width: 860px) {
+                            max-width: 42px;
+                            max-height: 42px;
+                        }
                     }
                 }
             }
