@@ -43,11 +43,11 @@
         "heading": "February Sale - Blinds You'll Love",
         "content": "Treat your home to beautiful made-to-measure blinds. Book your appointment now and fall in love with a fresh new look.",
         "button_one_text": "Blinds",
-        "button_one_link": "",
+        "button_one_link": "shopify://collections/blinds",
         "button_two_text": "Shutters",
-        "button_two_link": "",
+        "button_two_link": "shopify://collections/shutters",
         "button_three_text": "Curtains",
-        "button_three_link": ""
+        "button_three_link": "shopify://collections/curtains"
       }
     },
     "collection_grid_DetCqr": {
