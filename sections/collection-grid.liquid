@@ -7,9 +7,9 @@
           <a href="{{ collection.url }}" class="collection-grid__item">
             <div class="collection-grid__item__background">
               {% if block.settings.custom_image %}
-                <img src="{{ block.settings.custom_image | img_url: 'large' }}" alt="{{ collection.title }}">
+                <img src="{{ block.settings.custom_image | image_url }}" alt="{{ collection.title }}">
               {% else %}
-                <img src="{{ collection.image | img_url: 'large' }}" alt="{{ collection.title }}">
+                <img src="{{ collection.image | image_url }}" alt="{{ collection.title }}">
               {% endif %}
             </div>
             <div

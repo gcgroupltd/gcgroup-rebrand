@@ -3,12 +3,12 @@
     <div class="intro-banner__images">
       {% if collection %}
         <div class="intro-banner__image" style="opacity: 1;">
-          <img src="{{ collection.image | img_url: 'large' }}" alt="">
+          <img src="{{ collection.image | image_url }}" alt="">
         </div>
       {% else %}
         {% for block in section.blocks %}
           <div class="intro-banner__image{% if forloop.first %} is-active{% endif %}">
-            <img src="{{ block.settings.image | img_url: 'large' }}" alt="">
+            <img src="{{ block.settings.image | image_url }}" alt="">
           </div>
         {% endfor %}
         <div class="intro-banner__dots">

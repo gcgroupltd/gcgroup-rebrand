@@ -9,7 +9,7 @@
       {% for s in sections %}
         <div class="what-to-do-next__card">
           <div class="what-to-do-next__card__image">
-            <img src="{{ s.image | img_url: 'large' }}" alt="{{ s.title }}">
+            <img src="{{ s.image | image_url }}" alt="{{ s.title }}">
           </div>
           <div class="what-to-do-next__card__content">
             <h3>{{ s.title }}</h3>

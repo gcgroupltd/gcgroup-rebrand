@@ -58,11 +58,11 @@
             <div class="get-to-know__slide__image">
               {% if collection_obj.image %}
                 <img
-                  src="{{ collection_obj.image | img_url: 'large' }}"
+                  src="{{ collection_obj.image | image_url }}"
                   alt="{{ collection_obj.metafields.custom.collection_page_title }}"
                 >
               {% else %}
-                <img src="{{ s.image | img_url: 'large' }}" alt="{{  s.title }}">
+                <img src="{{ s.image | image_url }}" alt="{{  s.title }}">
               {% endif %}
             </div>
             <div class="get-to-know__slide__content">
