@@ -1,10 +1,7 @@
 {% assign sections = shop.metaobjects.what_to_do_next_items.values | sort: 'order' %}
 
-<section class="what-to-do-next">
-  <div
-    class="standard-container"
-    style="background-color: {{ section.settings.background_color }}; padding: 40px; max-widtH: calc(1520px - 80px)"
-  >
+<section class="what-to-do-next" style="background-color: {{ section.settings.background_color }}">
+  <div class="standard-container">
     <div class="what-to-do-next__head">
       <h2>What to do next</h2>
     </div>
