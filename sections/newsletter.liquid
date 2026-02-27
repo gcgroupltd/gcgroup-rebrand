@@ -4,6 +4,7 @@
 {%- style -%}
     #shopify-section-{{ section.id }} .newsletter-section-full-width {
       padding: 0;
+      margin-bottom: 40px;
     }
 
     #shopify-section-{{ section.id }} .newsletter-container-fw {
@@ -233,10 +234,10 @@
     }
 {%- endstyle -%}
 
-<div class="newsletter-section-full-width" style="background-color: {{ settings.newsletter_background }}">
+<div class="newsletter-section-full-width">
   <div
     class="newsletter-container-fw"
-    style="max-widtH: calc(1520px); margin: 0 auto;"
+    style="background-color: {{ settings.newsletter_background }}; max-widtH: calc(1520px - 80px); margin: 0 auto; padding: 0 40px"
   >
     <div class="newsletter-content-fw">
       {%- comment -%} {%- endcomment -%}
