@@ -4,6 +4,7 @@
 {%- style -%}
     #shopify-section-{{ section.id }} .newsletter-section-full-width {
       padding: 0;
+      margin-bottom: 40px;
     }
 
     #shopify-section-{{ section.id }} .newsletter-container-fw {
@@ -16,11 +17,11 @@
     }
 
     #shopify-section-{{ section.id }} .newsletter-content-fw {
-      padding: 50px;
+      padding: 40px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: left;
     }
 
     /* --- NEW: This container holds all the content and controls the width --- */
@@ -233,8 +234,11 @@
     }
 {%- endstyle -%}
 
-<div class="newsletter-section-full-width" style="background-color: {{ settings.newsletter_background }}">
-  <div class="newsletter-container-fw">
+<div class="newsletter-section-full-width">
+  <div
+    class="newsletter-container-fw"
+    style="background-color: {{ settings.newsletter_background }}; max-widtH: calc(1520px); margin: 0 auto;"
+  >
     <div class="newsletter-content-fw">
       {%- comment -%} {%- endcomment -%}
       <div class="newsletter-content-fw__inner">
