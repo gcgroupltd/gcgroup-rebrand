@@ -164,7 +164,10 @@
 {% assign sections = shop.metaobjects.how_it_works_down.values | sort: 'created_at' %}
 
 <div class="how-it-works-down">
-  <div class="large-container" style="background-color: {{ section.settings.background_color }}">
+  <div
+    class="standard-container"
+    style="background-color: {{ section.settings.background_color }}; padding-left: 40px; padding-right: 40px; max-widtH: calc(1520px - 80px);"
+  >
     <div class="how-it-works-down__grid">
       <div class="how-it-works-down__image">
         <img src="{{ settings.how_it_works_down_image |  image_url }}" alt="">

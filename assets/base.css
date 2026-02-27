@@ -15,7 +15,7 @@ body.no-scroll {
 }
 
 .standard-container {
-  max-width: 1920px;
+  max-width: 1520px;
   margin: 0 auto;
 }
 
@@ -769,7 +769,7 @@ body.no-scroll {
   flex-wrap: wrap;
 }
 .testimonial-slider__testimonials {
-  padding: 20px 0;
+  padding: 20px 40px;
   max-width: 100%;
 }
 @media screen and (min-width: 860px) {
