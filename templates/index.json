@@ -14,21 +14,15 @@
       "blocks": {
         "image_e7VMq7": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_osc5r4osc5r4osc5.png"
-          }
+          "settings": {}
         },
         "image_dkdd7n": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/arturo_porcelain.jpg"
-          }
+          "settings": {}
         },
         "image_4VJV6W": {
           "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Montana_-_Pure_White_001_A_9ff13209-be4a-4c08-8f8c-0efd504af94d.jpg"
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -43,7 +37,7 @@
         "heading": "February Sale - Blinds You'll Love",
         "content": "Treat your home to beautiful made-to-measure blinds. Book your appointment now and fall in love with a fresh new look.",
         "button_one_text": "Blinds",
-        "button_one_link": "shopify://collections/blinds",
+        "button_one_link": "shopify://collections/general-blinds",
         "button_two_text": "Shutters",
         "button_two_link": "shopify://collections/shutters",
         "button_three_text": "Curtains",
