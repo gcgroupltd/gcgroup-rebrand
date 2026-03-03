@@ -34,6 +34,27 @@
     {% endfor %}
   {% endif %}
 
+{% else %}
+  {% assign fallback_category = null %}
+  {% assign lower_title = collection.title | downcase %}
+
+  {% for category in main_menu %}
+    {% assign category_title = category.title | downcase %}
+    {% if lower_title contains category_title %}
+      {% assign fallback_category = category %}
+    {% endif %}
+  {% endfor %}
+
+  {% if fallback_category %}
+    {% for sublink in fallback_category.links %}
+      {% for child in sublink.links %}
+        {% if child.type == 'collection_link' and child.object %}
+          {% assign slides = slides | push: child.object.handle %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+
   {% assign get_to_know_count = slides.size %}
 {% endif %}
 
