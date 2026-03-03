@@ -34,25 +34,21 @@
     {% endfor %}
   {% endif %}
 
-{% else %}
-  {% assign fallback_category = null %}
-  {% assign lower_title = collection.title | downcase %}
-
-  {% for category in main_menu %}
-    {% assign category_title = category.title | downcase %}
-    {% if lower_title contains category_title %}
-      {% assign fallback_category = category %}
-    {% endif %}
-  {% endfor %}
-
-  {% if fallback_category %}
-    {% for sublink in fallback_category.links %}
-      {% for child in sublink.links %}
-        {% if child.type == 'collection_link' and child.object %}
-          {% assign slides = slides | push: child.object.handle %}
+  {% if current_category == null %}
+    {% if collection.title contains 'blinds' or collection.title contains 'Blinds' %}
+      {% for sublink in main_menu %}
+        {% if sublink.title contains 'Blinds' or sublink.title contains 'blinds' %}
+          {% for child in sublink.links %}
+            {% for grandchild in child.links %}
+              {% if grandchild.type == 'collection_link' %}
+                {% assign temp_array = grandchild.object.handle | split: ',' %}
+                {% assign slides = slides | concat: temp_array %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
         {% endif %}
       {% endfor %}
-    {% endfor %}
+    {% endif %}
   {% endif %}
 
   {% assign get_to_know_count = slides.size %}
