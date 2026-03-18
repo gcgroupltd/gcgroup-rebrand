@@ -25,9 +25,9 @@
         "type": "header",
         "settings": {
           "background_color": "#000000",
-          "logo": "shopify://shop_images/GC_Goldcrest_Horizontal_Reverse_RGB.svg",
+          "logo": "shopify://shop_images/GC_Grampian_Horizontal_Reverse_RGB.svg",
           "button_text": "Request Your Free Appointment",
-          "button_url": "https://book.goldcrest-blinds.co.uk/",
+          "button_url": "https://book.grampian-blinds.co.uk/",
           "main_nav": "main-menu"
         }
       },
@@ -46,9 +46,9 @@
           "col_1_title": "Goldcrest Blinds",
           "col_1_menu": "footer",
           "col_2_title": "Our Offering",
-          "col_2_menu": "offering-menu",
+          "col_2_menu": "",
           "col_3_title": "Get in Touch",
-          "col_3_menu": "contact-menu"
+          "col_3_menu": ""
         }
       }
     },
