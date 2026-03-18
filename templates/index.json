@@ -12,23 +12,29 @@
     "intro_banner_eeddTE": {
       "type": "intro-banner",
       "blocks": {
-        "image_e7VMq7": {
+        "image_cJNEpf": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Kassala_Emerald_Kitchen_Roller.webp"
+          }
         },
-        "image_dkdd7n": {
+        "image_P9JTMw": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/grampian-conservatory.webp"
+          }
         },
-        "image_4VJV6W": {
+        "image_9TJm4T": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Harper_Aqua_Kimbel_Damson_Curtain.jpg"
+          }
         }
       },
       "block_order": [
-        "image_e7VMq7",
-        "image_dkdd7n",
-        "image_4VJV6W"
+        "image_cJNEpf",
+        "image_P9JTMw",
+        "image_9TJm4T"
       ],
       "name": "Intro Banner",
       "settings": {
