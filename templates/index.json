@@ -56,84 +56,84 @@
         "collection_XVwXGK": {
           "type": "collection",
           "settings": {
-            "collection": "roller-blinds",
+            "collection": "roller-blinds-in-grampian",
             "custom_title": "Roller Blinds"
           }
         },
         "collection_efjXEE": {
           "type": "collection",
           "settings": {
-            "collection": "vertical-blinds",
+            "collection": "vertical-blinds-in-grampian",
             "custom_title": "Vertical Blinds"
           }
         },
         "collection_dQ9rE6": {
           "type": "collection",
           "settings": {
-            "collection": "shutters",
-            "custom_title": ""
+            "collection": "window-shutters-in-grampian",
+            "custom_title": "Shutters"
           }
         },
         "collection_JdAqVE": {
           "type": "collection",
           "settings": {
-            "collection": "pleated-blinds",
+            "collection": "pleated-blinds-in-grampian",
             "custom_title": "Pleated Blinds"
           }
         },
         "collection_zHL7N7": {
           "type": "collection",
           "settings": {
-            "collection": "wood-blinds",
+            "collection": "wooden-blinds-in-grampian",
             "custom_title": "Wooden Blinds"
           }
         },
         "collection_EAWLWH": {
           "type": "collection",
           "settings": {
-            "collection": "day-night-blinds",
-            "custom_title": "Day & Night"
+            "collection": "vision-blinds-in-grampian",
+            "custom_title": "Vision Blinds"
           }
         },
         "collection_gVx7BJ": {
           "type": "collection",
           "settings": {
             "collection": "curtains",
-            "custom_title": ""
+            "custom_title": "Curtains"
           }
         },
         "collection_rda9i3": {
           "type": "collection",
           "settings": {
-            "collection": "roman-blinds",
+            "collection": "roman-blinds-in-grampian",
             "custom_title": "Roman Blinds"
           }
         },
         "collection_ypx6cV": {
           "type": "collection",
           "settings": {
-            "collection": "perfect-fit-blinds",
+            "collection": "perfect-fit-blinds-in-grampian",
             "custom_title": "Perfect Fit Blinds"
           }
         },
         "collection_kE7HJL": {
           "type": "collection",
           "settings": {
-            "collection": "venetians",
+            "collection": "venetian-blinds-in-grampian",
             "custom_title": "Venetian Blinds"
           }
         },
         "collection_T4K9Qa": {
           "type": "collection",
           "settings": {
-            "collection": "skylight-blinds",
-            "custom_title": "Skylight"
+            "collection": "conservatory-blinds-in-grampian",
+            "custom_title": "Conservatory Blinds"
           }
         },
         "collection_bQQzgC": {
           "type": "collection",
           "settings": {
-            "collection": "electric-blinds",
+            "collection": "electric-blinds-in-grampian",
             "custom_title": "Electric Blinds"
           }
         }
