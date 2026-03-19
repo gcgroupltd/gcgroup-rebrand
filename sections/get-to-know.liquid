@@ -2,7 +2,7 @@
 {% assign get_to_know_count = 0 %}
 
 {% if section.settings.data == 'general' %}
-  {% assign slides = shop.metaobjects.get_to_know_slides.values | sort: 'created_at' | reverse %}
+  {% assign slides = shop.metaobjects.get_to_know_slides.values | sort: 'order' %}
   {% assign get_to_know_count = slides.size %}
 {% else %}
   {% assign main_menu = linklists['main-menu'].links %}
