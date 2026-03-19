@@ -120,7 +120,8 @@
           "type": "collection",
           "settings": {
             "collection": "venetian-blinds-in-grampian",
-            "custom_title": "Venetian Blinds"
+            "custom_title": "Venetian Blinds",
+            "custom_image": "shopify://shop_images/Venetian_FireEngineRed_Kids_Bedroom-min.jpg"
           }
         },
         "collection_T4K9Qa": {
@@ -178,7 +179,7 @@
       "settings": {
         "data": "general",
         "background_color": "#e8e9ea",
-        "title": "Get to know Goldcrest Blinds"
+        "title": "Get to know Grampian Blinds"
       }
     },
     "how_it_works_FcB36f": {
