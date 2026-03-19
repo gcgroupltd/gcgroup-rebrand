@@ -1,4 +1,5 @@
 {% assign testimonial_count = shop.metaobjects.testimonials.values.size %}
+{% assign testimonials = shop.metaobjects.testimonials.values | sort: 'order' %}
 
 <section class="testimonial-slider">
   <div>
@@ -10,7 +11,7 @@
         </div>
         <div class="testimonial-slider__testimonials__slider">
           <div class="testimonial-slider__track">
-            {% for t in shop.metaobjects.testimonials.values %}
+            {% for t in testimonials %}
               <div class="testimonial-slider__slide">
                 <h3>{{ t.title }}</h3>
                 <p>{{ t.quote }}</p>

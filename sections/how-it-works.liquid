@@ -1,5 +1,5 @@
 {% assign how-it-works_count = shop.metaobjects.how_it_works_steps.values.size %}
-{% assign slides = shop.metaobjects.how_it_works_steps.values | sort: 'created_at' %}
+{% assign slides = shop.metaobjects.how_it_works_steps.values | sort: 'step_number' %}
 
 <section class="how-it-works">
   <div class="standard-container">
@@ -8,7 +8,7 @@
     <div class="how-it-works__steps">
       {% for s in slides %}
         <div class="how-it-works__step" style="background-color: {{ section.settings.step_color }};">
-          <div class="how-it-works__step__number">{{ s.step_number }}</div>
+          <div class="how-it-works__step__number">STEP {{ s.step_number }}</div>
           <h3 class="how-it-works__step__title">{{ s.title }}</h3>
           <p class="how-it-works__step__description">{{ s.content }}</p>
         </div>
