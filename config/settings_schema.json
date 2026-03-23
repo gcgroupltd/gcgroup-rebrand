@@ -256,5 +256,95 @@
       "label": "X URL"
     }
   ]
+  },
+  {
+    "name": "PopUp",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "popup_enabled",
+        "label": "Enable?",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "popup_image",
+        "label": "Image",
+      },
+      {
+        "type": "text",
+        "id": "popup_book_first_text",
+        "label": "Booking First Line Text",
+        "default": "We're offering YOU"
+      },
+      {
+        "type": "text",
+        "id": "popup_book_main_text",
+        "label": "Booking Main Text",
+        "default": "up to 50% OFF selected fabrics!"
+      },
+      {
+        "type": "text",
+        "id": "popup_book_last_text",
+        "label": "Booking Last Line Text",
+        "default": "To take advantage of this limited time offer book your appointment today!"
+      },
+      {
+        "type": "text",
+        "id": "popup_book_button_text",
+        "label": "Booking Button Text",
+        "default": "Book your FREE Appointment"
+      },
+      {
+        "type": "text",
+        "id": "popup_book_button_url",
+        "label": "Booking Button URL"
+      },
+      {
+        "type": "text",
+        "id": "popup_or_text",
+        "label": "popup_or_text",
+        "default": "Or"
+      },
+      {
+        "type": "text",
+        "id": "popup_newsletter_top_text",
+        "label": "Newsletter Top Text",
+        "default": "Not ready to book yet?"
+      },
+      {
+        "type": "text",
+        "id": "popup_newsletter_main_text",
+        "label": "Newsletter Main Text",
+        "default": "Sign up to our Newsletter"
+      },
+      {
+        "type": "text",
+        "id": "popup_newsletter_third_text",
+        "label": "Newsletter Third Line Text",
+        "default": "To keep up to date with offers and news"
+      },
+      {
+        "type": "richtext",
+        "id": "popup_newsletter_terms_text",
+        "label": "Newsletter Terms Text",
+      }
+  ]
+  },
+  {
+    "name": "Announcement Bar",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "announcement_bar_enabled",
+        "label": "Enable?",
+        "default": false
+      },
+      {
+        "type": "richtext",
+        "id": "announcement_bar_text",
+        "label": "Announcement Text"
+      }
+    ]
   }
 ]

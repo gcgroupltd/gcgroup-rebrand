@@ -101,3 +101,17 @@ body {
         }
     }
 }
+
+.announcement-banner {
+    background: var(--theme-color);
+    padding: 15px 0;
+
+    p {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    a {
+        color: inherit;
+    }
+}
