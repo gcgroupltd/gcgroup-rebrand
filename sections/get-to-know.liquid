@@ -35,21 +35,25 @@
   {% endif %}
 
   {% if current_category == null %}
-    {% if collection.title contains 'blinds'
-      or collection.title contains 'Blinds'
-      or collection.title contains 'Shutters'
-      or collection.title contains 'shutters'
-      or collection.title contains 'Curtains'
-      or collection.title contains 'curtains'
-    %}
+    {% assign current_type = '' %}
+
+    {% assign collection_title_down = collection.title | downcase %}
+
+    {% if collection_title_down contains 'blind' %}
+      {% assign current_type = 'blinds' %}
+    {% elsif collection_title_down contains 'shutter' %}
+      {% assign current_type = 'shutters' %}
+    {% elsif collection_title_down contains 'curtain' %}
+      {% assign current_type = 'curtains' %}
+    {% endif %}
+
+    {% if current_type != '' %}
+      {% assign current_type_down = current_type | downcase %}
+
       {% for sublink in main_menu %}
-        {% if sublink.title contains 'Blinds'
-          or sublink.title contains 'blinds'
-          or sublink.title contains 'shutters'
-          or sublink.title contains 'Shutters'
-          or sublink.title contains 'curtains'
-          or sublink.title contains 'Curtains'
-        %}
+        {% assign title_down = sublink.title | downcase %}
+
+        {% if title_down contains current_type_down %}
           {% for child in sublink.links %}
             {% for grandchild in child.links %}
               {% if grandchild.type == 'collection_link' %}
@@ -74,13 +78,12 @@
     <div class="get-to-know__head">
       <h2>{{ section.settings.title }}</h2>
 
-      {% comment %} {% if get_to_know_count > 3 %} {% endcomment %}
       <div class="get-to-know__buttons">
         <button class="button button--square get-to-know__button--prev">←</button>
         <button class="button button--square get-to-know__button--next">→</button>
       </div>
-      {% comment %} {% endif %} {% endcomment %}
     </div>
+
     <div class="get-to-know__slider">
       <div class="get-to-know__track">
         {% for s in slides %}
@@ -94,9 +97,10 @@
                   alt="{{ collection_obj.metafields.custom.collection_page_title }}"
                 >
               {% else %}
-                <img src="{{ s.image | image_url }}" alt="{{  s.title }}">
+                <img src="{{ s.image | image_url }}" alt="{{ s.title }}">
               {% endif %}
             </div>
+
             <div class="get-to-know__slide__content">
               {% if collection_obj %}
                 {% if collection_obj.metafields.custom.collection_page_title == blank %}
@@ -104,9 +108,11 @@
                 {% else %}
                   <h3>{{ collection_obj.metafields.custom.collection_page_title }}</h3>
                 {% endif %}
+
                 <p>{{ collection_obj.metafields.custom.short_description }}</p>
-                <a href="{{ collection_obj.url }}"
-                  >View {{ collection_obj.metafields.custom.collection_page_title | default: collection_obj.title }}
+
+                <a href="{{ collection_obj.url }}">
+                  View {{ collection_obj.metafields.custom.collection_page_title | default: collection_obj.title }}
                 </a>
               {% else %}
                 <h3>{{ s.title }}</h3>
@@ -209,8 +215,6 @@
     });
 
     window.addEventListener('resize', calculate);
-
-    // Wait for layout/images
     window.addEventListener('load', calculate);
   });
 </script>
