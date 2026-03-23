@@ -25,6 +25,7 @@
     "popup_image": "shopify://shop_images/Harper_Aqua_Kimbel_Damson_Curtain.jpg",
     "popup_book_button_url": "https://book.grampian-blinds.co.uk",
     "popup_newsletter_terms_text": "<p>We take safeguarding your details seriously. See our <a href=\"/pages/privacy-policy\" title=\"Privacy Policy\">privacy policy</a>.</p>",
+    "announcement_bar_enabled": true,
     "announcement_bar_text": "<p>Our showroom is currently closed for refurbishment. If you need assistance please call <a href=\"tel:01224662884\">01224 662 884</a></p>",
     "sections": {
       "header": {
