@@ -35,9 +35,21 @@
   {% endif %}
 
   {% if current_category == null %}
-    {% if collection.title contains 'blinds' or collection.title contains 'Blinds' %}
+    {% if collection.title contains 'blinds'
+      or collection.title contains 'Blinds'
+      or collection.title contains 'Shutters'
+      or collection.title contains 'shutters'
+      or collection.title contains 'Curtains'
+      or collection.title contains 'curtains'
+    %}
       {% for sublink in main_menu %}
-        {% if sublink.title contains 'Blinds' or sublink.title contains 'blinds' %}
+        {% if sublink.title contains 'Blinds'
+          or sublink.title contains 'blinds'
+          or sublink.title contains 'shutters'
+          or sublink.title contains 'Shutters'
+          or sublink.title contains 'curtains'
+          or sublink.title contains 'Curtains'
+        %}
           {% for child in sublink.links %}
             {% for grandchild in child.links %}
               {% if grandchild.type == 'collection_link' %}
