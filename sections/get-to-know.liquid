@@ -35,33 +35,30 @@
   {% endif %}
 
   {% if current_category == null %}
-    {% if collection.title contains 'blinds'
-      or collection.title contains 'Blinds'
-      or collection.title contains 'Shutters'
-      or collection.title contains 'shutters'
-      or collection.title contains 'Curtains'
-      or collection.title contains 'curtains'
-    %}
-      {% for sublink in main_menu %}
-        {% if sublink.title contains 'Blinds'
-          or sublink.title contains 'blinds'
-          or sublink.title contains 'shutters'
-          or sublink.title contains 'Shutters'
-          or sublink.title contains 'curtains'
-          or sublink.title contains 'Curtains'
-        %}
-          {% for child in sublink.links %}
-            {% for grandchild in child.links %}
-              {% if grandchild.type == 'collection_link' %}
-                {% assign temp_array = grandchild.object.handle | split: ',' %}
-                {% assign slides = slides | concat: temp_array %}
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        {% endif %}
+{% assign current_type = '' %}
+
+{% if collection.title contains 'blind' or collection.title contains 'Blind' %}
+  {% assign current_type = 'blinds' %}
+{% elsif collection.title contains 'shutter' or collection.title contains 'Shutter' %}
+  {% assign current_type = 'shutters' %}
+{% elsif collection.title contains 'curtain' or collection.title contains 'Curtain' %}
+  {% assign current_type = 'curtains' %}
+{% endif %}
+
+{% if current_type != '' %}
+  {% for sublink in main_menu %}
+    {% if sublink.title contains current_type or sublink.title contains current_type | capitalize %}
+      {% for child in sublink.links %}
+        {% for grandchild in child.links %}
+          {% if grandchild.type == 'collection_link' %}
+            {% assign temp_array = grandchild.object.handle | split: ',' %}
+            {% assign slides = slides | concat: temp_array %}
+          {% endif %}
+        {% endfor %}
       {% endfor %}
     {% endif %}
-  {% endif %}
+  {% endfor %}
+{% endif %}
 
   {% assign get_to_know_count = slides.size %}
 {% endif %}
