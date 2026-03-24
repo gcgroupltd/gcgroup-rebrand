@@ -1377,4 +1377,34 @@ body.no-scroll {
   visibility: visible;
 }
 
+.blog-articles {
+  display: flex;
+  flex-wrap: wrap;
+}
+.blog-articles > div, .blog-articles a {
+  widtH: calc(33.33% - 24px);
+  margin-right: 36px;
+  margin-bottom: 36px;
+  text-decoration: none;
+}
+.blog-articles > div:nth-of-type(3n), .blog-articles a:nth-of-type(3n) {
+  margin-right: 0;
+}
+.blog-articles > div img, .blog-articles a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.blog-articles > div h3, .blog-articles a h3 {
+  color: #000;
+  text-decoration: none;
+}
+.blog-articles__image {
+  height: 100%;
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
 /*# sourceMappingURL=base.css.map */
