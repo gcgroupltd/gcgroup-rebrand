@@ -9,6 +9,54 @@
  */
 {
   "sections": {
+    "blog_articles_ai6cVq": {
+      "type": "blog-articles",
+      "blocks": {
+        "article_gG7rNi": {
+          "type": "article",
+          "settings": {
+            "image": "shopify://shop_images/KCA_DEUTAG.webp",
+            "title": "KCA Deutag",
+            "description": "166no Silent Gliss Roller Blinds (6 electrically operated/ 160 manual operated)<br><br>\nFabric: Versa Screen from Silent Gliss"
+          }
+        },
+        "article_UWhmeE": {
+          "type": "article",
+          "settings": {
+            "image": "shopify://shop_images/epmlogo.webp",
+            "title": "Emerson",
+            "description": "200no Chain Operated Roller Blinds<br><br>\nFabric: Uniview Sprectra 3000 from Decora"
+          }
+        },
+        "article_gttrKc": {
+          "type": "article",
+          "settings": {
+            "image": "shopify://shop_images/oss_new_v5.webp",
+            "title": "OneSubsea",
+            "description": "146no Chain Op Roller Blinds<br><br>\nFabric: Pallette from Eclipse"
+          }
+        },
+        "article_iWjm8Q": {
+          "type": "article",
+          "settings": {
+            "image": "shopify://shop_images/caledonian-exchange-edinbrugh.webp",
+            "title": "Caledonian Exchange (Edinburgh)",
+            "description": "43no Roller Blinds<br><br>\nFabric Wyre from Dutton & Gavin (Textiles) Ltd"
+          }
+        }
+      },
+      "block_order": [
+        "article_gG7rNi",
+        "article_UWhmeE",
+        "article_gttrKc",
+        "article_iWjm8Q"
+      ],
+      "name": "Blog Articles",
+      "settings": {
+        "type": "custom",
+        "subtype": "news"
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -22,6 +70,7 @@
     }
   },
   "order": [
+    "blog_articles_ai6cVq",
     "main",
     "newsletter"
   ]
