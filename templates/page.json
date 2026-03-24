@@ -43,13 +43,21 @@
             "title": "Caledonian Exchange (Edinburgh)",
             "description": "43no Roller Blinds<br><br>\nFabric Wyre from Dutton & Gavin (Textiles) Ltd"
           }
+        },
+        "article_pyf8jt": {
+          "type": "article",
+          "settings": {
+            "title": "NHS",
+            "description": "Woodend Orthopaedic Clinic- Wand control verticals- hospital standard wipe able FR fabrics<br><br>\nMacduff Medical Centre- Wand control verticals- hospital standard wipe able FR fabrics<br><br>\nBanchory Medical Centre- Wand control verticals- hospital standard wipe able FR fabrics<br><br>\nAll above Fabrics from Dutton & Gavin (Textiles) Ltd."
+          }
         }
       },
       "block_order": [
         "article_gG7rNi",
         "article_UWhmeE",
         "article_gttrKc",
-        "article_iWjm8Q"
+        "article_iWjm8Q",
+        "article_pyf8jt"
       ],
       "name": "Blog Articles",
       "settings": {
