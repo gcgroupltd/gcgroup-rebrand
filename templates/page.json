@@ -74,6 +74,13 @@
             "title": "Anderson Construction- Cummings Park Community Centre",
             "description": "Chain Op Roller Blinds<br><br>\nFabric: Flame Retardant(FR) and Blackout(B/O) Wyre from Dutton & Gavin (Textiles) Ltd"
           }
+        },
+        "article_mphdnN": {
+          "type": "article",
+          "settings": {
+            "title": "St Geraldines School and Seafield Primary School",
+            "description": "23no Roller Blinds - all child safe, heavy duty system<br><br>\nFabric: FR/Blackout Windsor from Dutton & Gavin (Textiles) Ltd"
+          }
         }
       },
       "block_order": [
@@ -84,7 +91,8 @@
         "article_pyf8jt",
         "article_qeYfTg",
         "article_KiziDM",
-        "article_z6yxgx"
+        "article_z6yxgx",
+        "article_mphdnN"
       ],
       "name": "Blog Articles",
       "settings": {
