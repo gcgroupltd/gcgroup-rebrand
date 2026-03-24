@@ -9,97 +9,6 @@
  */
 {
   "sections": {
-    "blog_articles_ai6cVq": {
-      "type": "blog-articles",
-      "blocks": {
-        "article_gG7rNi": {
-          "type": "article",
-          "settings": {
-            "image": "shopify://shop_images/KCA_DEUTAG.webp",
-            "title": "KCA Deutag",
-            "description": "166no Silent Gliss Roller Blinds (6 electrically operated/ 160 manual operated)<br><br>\nFabric: Versa Screen from Silent Gliss"
-          }
-        },
-        "article_UWhmeE": {
-          "type": "article",
-          "settings": {
-            "image": "shopify://shop_images/epmlogo.webp",
-            "title": "Emerson",
-            "description": "200no Chain Operated Roller Blinds<br><br>\nFabric: Uniview Sprectra 3000 from Decora"
-          }
-        },
-        "article_gttrKc": {
-          "type": "article",
-          "settings": {
-            "image": "shopify://shop_images/oss_new_v5.webp",
-            "title": "OneSubsea",
-            "description": "146no Chain Op Roller Blinds<br><br>\nFabric: Pallette from Eclipse"
-          }
-        },
-        "article_iWjm8Q": {
-          "type": "article",
-          "settings": {
-            "image": "shopify://shop_images/caledonian-exchange-edinbrugh.webp",
-            "title": "Caledonian Exchange (Edinburgh)",
-            "description": "43no Roller Blinds<br><br>\nFabric Wyre from Dutton & Gavin (Textiles) Ltd"
-          }
-        },
-        "article_pyf8jt": {
-          "type": "article",
-          "settings": {
-            "image": "shopify://shop_images/Nhsgrampianlogo.webp",
-            "title": "NHS",
-            "description": "Woodend Orthopaedic Clinic- Wand control verticals- hospital standard wipe able FR fabrics<br><br>\nMacduff Medical Centre- Wand control verticals- hospital standard wipe able FR fabrics<br><br>\nBanchory Medical Centre- Wand control verticals- hospital standard wipe able FR fabrics<br><br>\nAll above Fabrics from Dutton & Gavin (Textiles) Ltd."
-          }
-        },
-        "article_qeYfTg": {
-          "type": "article",
-          "settings": {
-            "image": "shopify://shop_images/aberdeen-airport.webp",
-            "title": "Aberdeen Airport",
-            "description": "Window frosted filem / Roller Blinds<br><br>\nFabric: Perspective from Louvolite"
-          }
-        },
-        "article_KiziDM": {
-          "type": "article",
-          "settings": {
-            "image": "shopify://shop_images/mannofield-church.webp",
-            "title": "Mannofield Church",
-            "description": "Intu Venetian Blinds/Velux Blinds/Heavy Duty Motorised Roller Blind<br><br>\nFabric: Perspective FR from Louvolite"
-          }
-        },
-        "article_z6yxgx": {
-          "type": "article",
-          "settings": {
-            "title": "Anderson Construction- Cummings Park Community Centre",
-            "description": "Chain Op Roller Blinds<br><br>\nFabric: Flame Retardant(FR) and Blackout(B/O) Wyre from Dutton & Gavin (Textiles) Ltd"
-          }
-        },
-        "article_mphdnN": {
-          "type": "article",
-          "settings": {
-            "title": "St Geraldines School and Seafield Primary School",
-            "description": "23no Roller Blinds - all child safe, heavy duty system<br><br>\nFabric: FR/Blackout Windsor from Dutton & Gavin (Textiles) Ltd"
-          }
-        }
-      },
-      "block_order": [
-        "article_gG7rNi",
-        "article_UWhmeE",
-        "article_gttrKc",
-        "article_iWjm8Q",
-        "article_pyf8jt",
-        "article_qeYfTg",
-        "article_KiziDM",
-        "article_z6yxgx",
-        "article_mphdnN"
-      ],
-      "name": "Blog Articles",
-      "settings": {
-        "type": "custom",
-        "subtype": "news"
-      }
-    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -113,7 +22,6 @@
     }
   },
   "order": [
-    "blog_articles_ai6cVq",
     "main",
     "newsletter"
   ]
