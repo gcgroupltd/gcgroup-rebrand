@@ -1,10 +1,11 @@
 {
   "sections": {
     "main": {
-      "type": "contact-page",
-    },
+      "type": "reviews-and-ratings",
+
+    }
   },
   "order": [
-    "main",
+    "main"
   ]
 }
