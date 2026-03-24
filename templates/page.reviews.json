@@ -10,6 +10,9 @@
 {
   "sections": {
     "main": {
+      "type": "main-page"
+    },
+    "reviews": {
       "type": "reviews-and-ratings",
       "blocks": {
         "rating_tile_BwY9zD": {
@@ -207,6 +210,6 @@
     }
   },
   "order": [
-    "main"
+    "main", "reviews"
   ]
 }
