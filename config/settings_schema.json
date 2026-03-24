@@ -11,25 +11,53 @@
     ]
   },
   {
-    "name": "Opening Times",
+    "name": "Opening Hours",
     "settings": [
       {
-        "type": "text",
-        "id": "opening_weekdays",
-        "label": "Opening Times - Weekdays",
-        "default": "8am - 5pm"
+        "type": "paragraph",
+        "content": "This shows on the contact page and the header. Please format as HH:MM - HH:MM using the 24Hour clock. If shop is closed type 'Closed'."
       },
       {
-        "type": "text",
-        "id": "opening_saturday",
-        "label": "Opening Times - Saturday",
-        "default": "Closed"
+        "type" : "text",
+        "id": "opening_hours_monday",
+        "label": "Opening Hours Monday (HH:MM - HH:MM (24hr))",
+        "default": "08:00 - 17:00"
       },
       {
-        "type": "text",
-        "id": "opening_sunday",
-        "label": "Opening Times - Sunday",
-        "default": "Closed"
+        "type" : "text",
+        "id": "opening_hours_tuesday",
+        "label": "Opening Hours Tuesday (HH:MM - HH:MM (24hr))",
+        "default": "08:00 - 17:00"
+      },
+      {
+        "type" : "text",
+        "id": "opening_hours_wednesday",
+        "label": "Opening Hours Wednesday (HH:MM - HH:MM (24hr))",
+        "default": "08:00 - 17:00"
+      },
+      {
+        "type" : "text",
+        "id": "opening_hours_thursday",
+        "label": "Opening Hours Thursday (HH:MM - HH:MM (24hr))",
+        "default": "08:00 - 17:00"
+      },
+      {
+        "type" : "text",
+        "id": "opening_hours_friday",
+        "label": "Opening Hours Friday (HH:MM - HH:MM (24hr))",
+        "default": "08:00 - 17:00"
+      },
+      {
+        "type" : "text",
+        "id": "opening_hours_saturday",
+        "label": "Opening Hours Saturday (HH:MM - HH:MM (24hr))",
+        "default": "closed"
+      },
+      {
+        "type" : "text",
+        "id": "opening_hours_sunday",
+        "label": "Opening Hours Sunday (HH:MM - HH:MM (24hr))",
+        "default": "closed"
       }
     ]
   },
@@ -346,5 +374,32 @@
         "label": "Announcement Text"
       }
     ]
+  },
+    {
+    "name": "404 Page",
+    "settings": [{
+      "type": "text",
+      "id": "404_title",
+      "label": "404 Title",
+      "default": "404 Error"
+    },
+    {
+      "type": "text",
+      "id": "404_subtitle",
+      "label": "404 Subtitle",
+      "default": "Page not Found"
+    },
+    {
+      "type": "url",
+      "id": "404_button_url",
+      "label": "404 Button URL"
+    },
+    {
+      "type": "text",
+      "id": "404_button_text",
+      "label": "404 Button Text",
+      "default": "See all collections"
+    }
+  ]
   }
 ]

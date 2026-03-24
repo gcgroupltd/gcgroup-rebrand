@@ -5,16 +5,66 @@
       <img src="{{ section.settings.logo | img_url: 'small' }}" alt="">
     </a>
     <div class="header__ctas">
-      <a href="tel:{{ settings.contact_phone }}" class="header__ctas__phone">
-        {% assign today = 'now' | date: '%A' %}
-        {% assign opening_time = settings.opening_weekdays %}
+      <a
+        href="tel:{{ settings.contact_phone }}"
+        class="header__ctas__phone"
+        onclick="gtag('event', 'conversion', {'send_to': '{{  settings.google_tag_id }}', 'value': 'topbar-tel'});"
+      >
+        {% assign day_of_week = 'now' | date: '%A' %}
+        {% case day_of_week %}
+          {% when 'Monday' %}
+            {% assign today_hours = settings.opening_hours_monday %}
+          {% when 'Tuesday' %}
+            {% assign today_hours = settings.opening_hours_tuesday %}
+          {% when 'Wednesday' %}
+            {% assign today_hours = settings.opening_hours_wednesday %}
+          {% when 'Thursday' %}
+            {% assign today_hours = settings.opening_hours_thursday %}
+          {% when 'Friday' %}
+            {% assign today_hours = settings.opening_hours_friday %}
+          {% when 'Saturday' %}
+            {% assign today_hours = settings.opening_hours_saturday %}
+          {% when 'Sunday' %}
+            {% assign today_hours = settings.opening_hours_sunday %}
+        {% endcase %}
 
-        {% if today == 'Saturday' %}
-          {% assign opening_time = settings.opening_saturday %}
-        {% elsif today == 'Sunday' %}
-          {% assign opening_time = settings.opening_sunday %}
+        {% if today_hours == 'closed' %}
+          <p>We are closed today</p>
+        {% else %}
+          {% assign open_time = today_hours | split: ' - ' | first %}
+          {% assign close_time = today_hours | split: ' - ' | last %}
+
+          {% assign open_hour = open_time | slice: 0, 2 | plus: 0 %}
+          {% assign open_minute = open_time | slice: 3, 2 %}
+          {% assign close_hour = close_time | slice: 0, 2 | plus: 0 %}
+          {% assign close_minute = close_time | slice: 3, 2 %}
+
+          {% assign open_suffix = 'am' %}
+          {% assign close_suffix = 'am' %}
+
+          {% if open_hour >= 12 %}
+            {% assign open_suffix = 'pm' %}
+            {% if open_hour > 12 %}
+              {% assign open_hour = open_hour | minus: 12 %}
+            {% endif %}
+          {% endif %}
+
+          {% if close_hour >= 12 %}
+            {% assign close_suffix = 'pm' %}
+            {% if close_hour > 12 %}
+              {% assign close_hour = close_hour | minus: 12 %}
+            {% endif %}
+          {% endif %}
+
+          <p>
+            Call today: {{ open_hour -}}
+            {%- if open_minute != '00' %}:{{ open_minute }}{% endif -%}
+            {{- open_suffix }} - {{ close_hour -}}
+            {%- if close_minute != '00' %}:{{ close_minute }}{% endif -%}
+            {{- close_suffix }}
+          </p>
         {% endif %}
-        <p>Call today: {{ opening_time }}</p>
+
         <p>{{ settings.contact_phone }}</p>
       </a>
 
