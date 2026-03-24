@@ -12,34 +12,40 @@
     "intro_banner_eeddTE": {
       "type": "intro-banner",
       "blocks": {
-        "image_e7VMq7": {
+        "image_cJNEpf": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Kassala_Emerald_Kitchen_Roller.webp"
+          }
         },
-        "image_dkdd7n": {
+        "image_P9JTMw": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/grampian-conservatory.webp"
+          }
         },
-        "image_4VJV6W": {
+        "image_9TJm4T": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Harper_Aqua_Kimbel_Damson_Curtain.jpg"
+          }
         }
       },
       "block_order": [
-        "image_e7VMq7",
-        "image_dkdd7n",
-        "image_4VJV6W"
+        "image_cJNEpf",
+        "image_P9JTMw",
+        "image_9TJm4T"
       ],
       "name": "Intro Banner",
       "settings": {
         "background_color": "#de162a",
         "text_color": "#ffffff",
-        "heading": "February Sale - Blinds You'll Love",
-        "content": "Treat your home to beautiful made-to-measure blinds. Book your appointment now and fall in love with a fresh new look.",
+        "heading": "Fresh New Look This Spring!",
+        "content": "Enjoy a free appointment where our experts help you choose the perfect style.",
         "button_one_text": "Blinds",
         "button_one_link": "shopify://collections/blinds",
         "button_two_text": "Shutters",
-        "button_two_link": "shopify://collections/shutters",
+        "button_two_link": "shopify://collections/window-shutters-in-grampian",
         "button_three_text": "Curtains",
         "button_three_link": "shopify://collections/curtains"
       }
@@ -50,84 +56,85 @@
         "collection_XVwXGK": {
           "type": "collection",
           "settings": {
-            "collection": "roller-blinds",
+            "collection": "roller-blinds-in-grampian",
             "custom_title": "Roller Blinds"
           }
         },
         "collection_efjXEE": {
           "type": "collection",
           "settings": {
-            "collection": "vertical-blinds",
+            "collection": "vertical-blinds-in-grampian",
             "custom_title": "Vertical Blinds"
           }
         },
         "collection_dQ9rE6": {
           "type": "collection",
           "settings": {
-            "collection": "shutters",
-            "custom_title": ""
+            "collection": "window-shutters-in-grampian",
+            "custom_title": "Shutters"
           }
         },
         "collection_JdAqVE": {
           "type": "collection",
           "settings": {
-            "collection": "pleated-blinds",
+            "collection": "pleated-blinds-in-grampian",
             "custom_title": "Pleated Blinds"
           }
         },
         "collection_zHL7N7": {
           "type": "collection",
           "settings": {
-            "collection": "wood-blinds",
+            "collection": "wooden-blinds-in-grampian",
             "custom_title": "Wooden Blinds"
           }
         },
         "collection_EAWLWH": {
           "type": "collection",
           "settings": {
-            "collection": "day-night-blinds",
-            "custom_title": "Day & Night"
+            "collection": "vision-blinds-in-grampian",
+            "custom_title": "Vision Blinds"
           }
         },
         "collection_gVx7BJ": {
           "type": "collection",
           "settings": {
             "collection": "curtains",
-            "custom_title": ""
+            "custom_title": "Curtains"
           }
         },
         "collection_rda9i3": {
           "type": "collection",
           "settings": {
-            "collection": "roman-blinds",
+            "collection": "roman-blinds-in-grampian",
             "custom_title": "Roman Blinds"
           }
         },
         "collection_ypx6cV": {
           "type": "collection",
           "settings": {
-            "collection": "perfect-fit-blinds",
+            "collection": "perfect-fit-blinds-in-grampian",
             "custom_title": "Perfect Fit Blinds"
           }
         },
         "collection_kE7HJL": {
           "type": "collection",
           "settings": {
-            "collection": "venetians",
-            "custom_title": "Venetian Blinds"
+            "collection": "venetian-blinds-in-grampian",
+            "custom_title": "Venetian Blinds",
+            "custom_image": "shopify://shop_images/Venetian_FireEngineRed_Kids_Bedroom-min.jpg"
           }
         },
         "collection_T4K9Qa": {
           "type": "collection",
           "settings": {
-            "collection": "skylight-blinds",
-            "custom_title": "Skylight"
+            "collection": "conservatory-blinds-in-grampian",
+            "custom_title": "Conservatory Blinds"
           }
         },
         "collection_bQQzgC": {
           "type": "collection",
           "settings": {
-            "collection": "electric-blinds",
+            "collection": "electric-blinds-in-grampian",
             "custom_title": "Electric Blinds"
           }
         }
@@ -172,7 +179,7 @@
       "settings": {
         "data": "general",
         "background_color": "#e8e9ea",
-        "title": "Get to know Goldcrest Blinds"
+        "title": "Get to know Grampian Blinds"
       }
     },
     "how_it_works_FcB36f": {
