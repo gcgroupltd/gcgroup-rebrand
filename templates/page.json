@@ -67,6 +67,13 @@
             "title": "Mannofield Church",
             "description": "Intu Venetian Blinds/Velux Blinds/Heavy Duty Motorised Roller Blind<br><br>\nFabric: Perspective FR from Louvolite"
           }
+        },
+        "article_z6yxgx": {
+          "type": "article",
+          "settings": {
+            "title": "Anderson Construction- Cummings Park Community Centre",
+            "description": "Chain Op Roller Blinds<br><br>\nFabric: Flame Retardant(FR) and Blackout(B/O) Wyre from Dutton & Gavin (Textiles) Ltd"
+          }
         }
       },
       "block_order": [
@@ -76,7 +83,8 @@
         "article_iWjm8Q",
         "article_pyf8jt",
         "article_qeYfTg",
-        "article_KiziDM"
+        "article_KiziDM",
+        "article_z6yxgx"
       ],
       "name": "Blog Articles",
       "settings": {
