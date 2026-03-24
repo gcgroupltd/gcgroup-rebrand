@@ -1,0 +1,100 @@
+<div class="blog-articles">
+  {% if section.settings.type == 'custom' %}
+    {% assign items = section.blocks %}
+  {% else %}
+    {% assign items = blogs[section.settings.subtype].articles %}
+  {% endif %}
+
+  {% for item in items %}
+    {% if section.settings.type == 'custom' %}
+      {% assign image = item.settings.image %}
+      {% assign title = item.settings.title %}
+      {% assign description = item.settings.description %}
+      {% assign url = blank %}
+    {% else %}
+      {% assign image = item.image %}
+      {% assign title = item.title %}
+      {% assign description = item.excerpt %}
+      {% assign url = item.url %}
+    {% endif %}
+
+    {% if url != blank %}
+      <a href="{{ url }}" class="blog-articles__article">
+    {% else %}
+      <div class="blog-articles__article">
+    {% endif %}
+
+    {% if image %}
+      <div class="blog-articles__image">
+        <img
+          src="{{ image | image_url }}"
+          alt="{{ title | escape }}"
+        >
+      </div>
+    {% endif %}
+
+    {% if title %}
+      <h3>{{ title }}</h3>
+    {% endif %}
+
+    {% if description %}
+      <p>{{ description }}</p>
+    {% endif %}
+
+    {% if url != blank %}
+      </a>
+    {% else %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Blog Articles",
+  "settings": [
+    {
+      "type": "select",
+      "id": "type",
+      "label": "Type",
+      "options": [
+        {
+          "value": "blog-articles",
+          "label": "Blog Articles"
+        },
+        {
+          "value": "custom",
+          "label": "Custom Content"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "subtype",
+      "label": "Type",
+      "options": [
+        {
+          "value": "news",
+          "label": "News"
+        },
+        {
+          "value": "case-studies",
+          "label": "Case Studies"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "article",
+      "name": "Blog Article",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "textarea", "id": "description", "label": "Description" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Blog Articles" }]
+}
+{% endschema %}
