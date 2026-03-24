@@ -47,8 +47,25 @@
         "article_pyf8jt": {
           "type": "article",
           "settings": {
+            "image": "shopify://shop_images/Nhsgrampianlogo.webp",
             "title": "NHS",
             "description": "Woodend Orthopaedic Clinic- Wand control verticals- hospital standard wipe able FR fabrics<br><br>\nMacduff Medical Centre- Wand control verticals- hospital standard wipe able FR fabrics<br><br>\nBanchory Medical Centre- Wand control verticals- hospital standard wipe able FR fabrics<br><br>\nAll above Fabrics from Dutton & Gavin (Textiles) Ltd."
+          }
+        },
+        "article_qeYfTg": {
+          "type": "article",
+          "settings": {
+            "image": "shopify://shop_images/aberdeen-airport.webp",
+            "title": "Aberdeen Airport",
+            "description": "Window frosted filem / Roller Blinds<br><br>\nFabric: Perspective from Louvolite"
+          }
+        },
+        "article_KiziDM": {
+          "type": "article",
+          "settings": {
+            "image": "shopify://shop_images/mannofield-church.webp",
+            "title": "Mannofield Church",
+            "description": "Intu Venetian Blinds/Velux Blinds/Heavy Duty Motorised Roller Blind<br><br>\nFabric: Perspective FR from Louvolite"
           }
         }
       },
@@ -57,7 +74,9 @@
         "article_UWhmeE",
         "article_gttrKc",
         "article_iWjm8Q",
-        "article_pyf8jt"
+        "article_pyf8jt",
+        "article_qeYfTg",
+        "article_KiziDM"
       ],
       "name": "Blog Articles",
       "settings": {
