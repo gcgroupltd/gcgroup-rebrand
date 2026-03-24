@@ -1,10 +1,212 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page"
     },
     "reviews": {
-      "type": "reviews-and-ratings"
+      "type": "reviews-and-ratings",
+      "blocks": {
+        "rating_tile_BwY9zD": {
+          "type": "rating_tile",
+          "settings": {
+            "tile_label": "Overall",
+            "tile_rating": "4.8",
+            "tile_reviews": "188 reviews"
+          }
+        },
+        "rating_tile_jAaw7n": {
+          "type": "rating_tile",
+          "settings": {
+            "tile_label": "Trustpilot",
+            "tile_rating": "4.6",
+            "tile_reviews": "135 reviews"
+          }
+        },
+        "rating_tile_MP883d": {
+          "type": "rating_tile",
+          "settings": {
+            "tile_label": "Google",
+            "tile_rating": "4.4",
+            "tile_reviews": "53 reviews"
+          }
+        },
+        "review_YbLiNT": {
+          "type": "review",
+          "settings": {
+            "name": "Craig Michie",
+            "review_date": "01/10/2025",
+            "body": "<p>Superb from start to finish. From coming in and measuring up, providing ideas and their own opinions on what type of blinds would suit the room and to different colour options. All of which look the part once installed.</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        },
+        "review_GpaHVQ": {
+          "type": "review",
+          "settings": {
+            "name": "Eileen Grassick",
+            "review_date": "11/10/2025",
+            "body": "<p>Our replacement blinds are lovely , just as we expected . Our fitter was most polite and friendly , carried out his work with utmost professionalism leaving his working area clean and tidy .<br/>We very much recommend Grampian Blinds Ltd.</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        },
+        "review_KWgDrj": {
+          "type": "review",
+          "settings": {
+            "name": "Ann Morrice",
+            "review_date": "27/07/2025",
+            "body": "<p>Very pleased with the service & fitting of 3 x roller blinds. Both members of staff who I dealt with were helpful, polite & professional. I would recommend Grampian Blinds to family & friends and wouldn’t hesitate to buy from them in the future.</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        },
+        "review_b3mnL3": {
+          "type": "review",
+          "settings": {
+            "name": "Jeff Yates",
+            "review_date": "18/10/2025",
+            "body": "<p>This was our third cafe shutters to be fitted in our Steading. An excellent service from initial visit, measurement, update on arrival and final fitting. Highly recommend this company and service.</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        },
+        "review_kPtJfw": {
+          "type": "review",
+          "settings": {
+            "name": "Kevin Edwards",
+            "review_date": "16/10/2025",
+            "body": "<p>there are great to work with as there helpful and polite and the blind fitter is good to chat with and if there is delays they phone you to keep you updated,i highly recommend grampian blinds.</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        },
+        "review_krULzM": {
+          "type": "review",
+          "settings": {
+            "name": "Margaret Williamson",
+            "review_date": "28/09/2025",
+            "body": "<p>Never go anywhere for our blinds but Grampian Blinds. Service is great, fits perfectly, great value. Always keep it local</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        },
+        "review_AUgz84": {
+          "type": "review",
+          "settings": {
+            "name": "Robert Hay",
+            "review_date": "15/09/2025",
+            "body": "<p>Good customer facing and very helpful in helping us choose the blinds we required.<br/>The installer was very professional and had the new blinds up in no time and very tidy and took away old blinds.</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        },
+        "review_nRtryc": {
+          "type": "review",
+          "settings": {
+            "name": "Mike Metselaar",
+            "review_date": "07/09/2025",
+            "body": "<p>We are very happy with the blinds installed by Grampian Blinds. We are particularly impressed with the cartridge blind system which fits neatly inside the boundaries of the 2 patio door windows.</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        },
+        "review_cm7VGx": {
+          "type": "review",
+          "settings": {
+            "name": "Linda Cowie",
+            "review_date": "05/09/2025",
+            "body": "<p>Very happy with my new blinds.<br/>ALL staff involved, from the estimate to fitting were friendly, knowledgeable and helpful</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        },
+        "review_FkxQxB": {
+          "type": "review",
+          "settings": {
+            "name": "Sandra Reid",
+            "review_date": "01/09/2025",
+            "body": "<p>Wouldn't consider going anywhere else. Professional, efficient and terrific service from start to finish.</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        },
+        "review_7GAzzG": {
+          "type": "review",
+          "settings": {
+            "name": "Julie Fletcher",
+            "review_date": "30/08/2025",
+            "body": "<p>Great service, pleasant staff, blinds arrived and fitted on time.<br/>I would definitely recommend this company.</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        },
+        "review_ibxfwg": {
+          "type": "review",
+          "settings": {
+            "name": "Jeannie Birnie",
+            "review_date": "26/07/2025",
+            "body": "<p>From the initial booking of the appointment for measurements to the fitting of our blinds all the staff were first class very helpful and professional. Over the years we have used Grampian Blinds many times and will use again.</p>",
+            "foot_pos_x": 50,
+            "foot_pos_y": 50,
+            "foot_fit": "contain"
+          }
+        }
+      },
+      "block_order": [
+        "rating_tile_BwY9zD",
+        "rating_tile_jAaw7n",
+        "rating_tile_MP883d",
+        "review_YbLiNT",
+        "review_GpaHVQ",
+        "review_KWgDrj",
+        "review_b3mnL3",
+        "review_kPtJfw",
+        "review_krULzM",
+        "review_AUgz84",
+        "review_nRtryc",
+        "review_cm7VGx",
+        "review_FkxQxB",
+        "review_7GAzzG",
+        "review_ibxfwg"
+      ],
+      "settings": {
+        "header_style": "tiles",
+        "foot_img_mode": "contain",
+        "single_headline": "4.8",
+        "single_subline": "42 reviews",
+        "foot_img_height_desktop": 180,
+        "foot_img_height_mobile": 140,
+        "foot_default_pos_x": 50,
+        "foot_default_pos_y": 50,
+        "tile_label_size": 14,
+        "tile_rating_size": 22,
+        "tile_reviews_size": 16,
+        "card_name_size": 18,
+        "card_date_size": 14,
+        "bg_color": "#f8f9fb",
+        "pad_y": 40,
+        "color_scheme": "default"
+      }
     }
   },
   "order": [
