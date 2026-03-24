@@ -11,10 +11,19 @@
   "sections": {
     "main": {
       "type": "blog-intro",
-
+      "settings": {}
+    },
+    "blog_articles_Wztqme": {
+      "type": "blog-articles",
+      "name": "Blog Articles",
+      "settings": {
+        "type": "blog-articles",
+        "subtype": "news"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "blog_articles_Wztqme"
   ]
 }
