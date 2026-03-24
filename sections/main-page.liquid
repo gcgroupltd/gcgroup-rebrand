@@ -33,16 +33,41 @@
     max-width: 100%;
     max-height: 100%;
   }
+
+  .return-to-blog {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .return-to-blog a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .return-to-blog:hover {
+    text-decoration: underline;
+  }
 </style>
 
 <section class="main-page">
-  <div class="small-container">
-    <h1>
-      {{ page.metafields.custom.on_page_title | default: page.title | escape }}
-    </h1>
-    <div>
-      {{ page.content }}
-    </div>
+  <div class="standard-container">
+    {% if template.name == 'page' %}
+      <h1>
+        {{ page.metafields.custom.on_page_title | default: page.title | escape }}
+      </h1>
+      <div>
+        {{ page.content }}
+      </div>
+
+    {% elsif template.name == 'article' %}
+      <h1>{{ article.title }}</h1>
+      <div>{{ article.content }}</div>
+
+      <div class="return-to-blog">
+        <a href="{{ blog.url }}">← Return to {{ blog.title }}</a>
+      </div>
+    {% endif %}
   </div>
 </section>
 

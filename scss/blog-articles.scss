@@ -8,6 +8,11 @@
         margin-bottom: 36px;
         text-decoration: none;
 
+        @media screen and (max-width: 768px) {
+            widtH: 100%;
+            margin-right: 0;
+        }
+
         &:nth-of-type(3n) {
             margin-right: 0;
         }
