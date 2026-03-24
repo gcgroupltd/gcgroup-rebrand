@@ -1,11 +1,13 @@
 {
   "sections": {
     "main": {
-      "type": "reviews-and-ratings",
-
+      "type": "main-page"
+    },
+    "reviews": {
+      "type": "reviews-and-ratings"
     }
   },
   "order": [
-    "main"
+    "main", "reviews"
   ]
 }
