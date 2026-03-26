@@ -237,6 +237,11 @@
         "default": "Book your free appointment"
       },
       {
+        "type": "url",
+        "id": "collection_header_button_url",
+        "label": "Button URL",
+      },
+      {
         "type": "color",
         "id": "collection_header_background_color",
         "label": "Background Colour",
