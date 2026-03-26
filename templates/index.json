@@ -27,7 +27,7 @@
         "image_9TJm4T": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Harper_Aqua_Kimbel_Damson_Curtain.jpg"
+            "image": "shopify://shop_images/Strong_White_Bay.jpg"
           }
         }
       },
@@ -120,8 +120,7 @@
           "type": "collection",
           "settings": {
             "collection": "venetian-blinds-in-grampian",
-            "custom_title": "Venetian Blinds",
-            "custom_image": "shopify://shop_images/Venetian_FireEngineRed_Kids_Bedroom-min.jpg"
+            "custom_title": "Venetian Blinds"
           }
         },
         "collection_T4K9Qa": {
