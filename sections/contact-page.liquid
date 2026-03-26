@@ -8,8 +8,18 @@
     justify-content: space-between;
   }
 
+  .contact-page__hero__content {
+    max-width: 40%;
+    width: 100%;
+  }
+
+  .contact-page__hero__map {
+    width: 60%;
+  }
+
   .contact-page__hero__map iframe {
     max-width: 100%;
+    width: 100%;
   }
 
   .contact-page__hero h1 {
@@ -27,13 +37,23 @@
 
   .contact-page__opening-hours {
     text-align: center;
-    margin-top: 60px;
+    max-width: 992px;
+    margin: 60px auto 0;
   }
 
   .contact-page__opening-hours ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+
+  .contact-page__opening-hours ul li {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .contact-page__opening-hours p {
+    font-size: 18px;
   }
 
   .contact-page__form {
@@ -45,6 +65,7 @@
 
   .contact-page__form__content {
     width: calc(50% - 15px);
+    font-size: 18px;
   }
 
   .contact-page__form form {
@@ -81,7 +102,7 @@
   }
   .contact-page__form .fields div input,
   .contact-page__form .fields div textarea {
-    width: 100%;
+    width: calc(100% - 24px);
     font-size: 18px;
     padding: 10px;
   }
