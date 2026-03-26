@@ -18,7 +18,7 @@
     --date-size: {{ section.settings.card_date_size }}px;
   "
 >
-  <div class="rr-inner page-width">
+  <div class="rr-inner standard-container">
     {%- if section.settings.header_style == 'single' -%}
       <!-- Single stars + text -->
       <div class="rr-top rr-top--single">
@@ -215,8 +215,8 @@
 
       /* Reviews Arrow Styling */
       #reviews-{{section.id }} .rr-inner .all-reviews-button {position: absolute; top: 50%; border: 0;  background: transparent; opacity: 0.6; }
-      #reviews-{{section.id }} .rr-inner .all-reviews-button.ar-carousel-arrow-prev { left: 15px; }
-      #reviews-{{section.id }} .rr-inner .all-reviews-button.ar-carousel-arrow-next { right: 15px; }
+      #reviews-{{section.id }} .rr-inner .all-reviews-button.ar-carousel-arrow-prev { left: 30px; }
+      #reviews-{{section.id }} .rr-inner .all-reviews-button.ar-carousel-arrow-next { right: 30px; }
 
       #reviews-{{section.id }} .rr-inner .all-reviews-button:hover {opacity: 1; cursor: pointer; }
 
