@@ -10,7 +10,7 @@
         <h1>{{ collection.metafields.custom.collection_page_title | default: collection.title }}</h1>
         {{ collection.description }}
         <div class="intro-banner__buttons">
-          <a href="{{ section.settings.button_one_link }}" class="button button--black">
+          <a href="{{ settings.collection_header_button_url }}" class="button button--black">
             {{- settings.collection_header_button_text -}}
           </a>
         </div>
