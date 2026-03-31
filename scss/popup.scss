@@ -184,6 +184,13 @@
                 label {
                     font-size: 13px;
                     left: 42px;
+                    position: absolute;
+                    top: 12px;
+                    margin-bottom: 0;
+                    pointer-events: none;
+                    letter-spacing: .1rem;
+                    transition: all 0.25s ease-in-out;
+                    line-height: 1.5;
                 }
 
                 .field {
@@ -217,6 +224,21 @@
 
                 .newsletter-form-fw__field-wrapper {
                     width: 100%;
+                }
+
+                .form__message {
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 15px;
+                    
+                    svg {
+                        height: 35px;
+                        margin-right: 10px;
+                    }
+
+
                 }
             }
         }
