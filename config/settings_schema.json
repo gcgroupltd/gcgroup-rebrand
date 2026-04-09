@@ -417,5 +417,15 @@
         "info": "This code will be injected into the <head> of your site. Perfect for things like Google Analytics or Facebook Pixel."
       },
     ]
+  },
+  {
+    "name": "Booking Details",
+    "settings": [
+      {
+      "type": "text",
+      "id": "booking_page_url",
+      "label": "Booking Page URL"
+    }
+   ]
   }
 ]
