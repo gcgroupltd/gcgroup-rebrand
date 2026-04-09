@@ -1,8 +1,6 @@
 .header {
-
-    @media screen and (min-width: 860px) {
         position: relative;
-    }
+    
     .standard-container {
         display: flex;
         justify-content: space-between;
@@ -447,7 +445,7 @@
 
             p:last-of-type {
                 font-size: 20px;
-            transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
 
 
                 @media screen and (max-width: 860px) {
@@ -457,11 +455,20 @@
         }
 
         a.button {
-            display: none;
+            display: block;
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            font-size: 14px;
+            padding: 15px;
 
             @media screen and (min-width: 860px) {
-                display: block;
                 margin-left: 15px;
+                position: relative;
+                right: unset;
+                bottom: unset;
+                font-size: inherit;
+                padding: 15px 25px;
             }
         }
     }

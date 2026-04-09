@@ -229,10 +229,8 @@ a.pagination__item:hover::after {
   max-height: 100%;
 }
 
-@media screen and (min-width: 860px) {
-  .header {
-    position: relative;
-  }
+.header {
+  position: relative;
 }
 .header .standard-container {
   display: flex;
@@ -632,12 +630,21 @@ a.pagination__item:hover::after {
   }
 }
 .header__ctas a.button {
-  display: none;
+  display: block;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 14px;
+  padding: 15px;
 }
 @media screen and (min-width: 860px) {
   .header__ctas a.button {
-    display: block;
     margin-left: 15px;
+    position: relative;
+    right: unset;
+    bottom: unset;
+    font-size: inherit;
+    padding: 15px 25px;
   }
 }
 
