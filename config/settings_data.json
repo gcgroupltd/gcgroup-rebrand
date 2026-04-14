@@ -9,30 +9,39 @@
  */
 {
   "current": {
-    "rating_text": "Rated Excellent",
-    "stars_text": "4.5 based on 188 reviews",
+    "contact_phone": "01786447647",
+    "opening_hours_monday": "09:00 - 17:00",
+    "opening_hours_tuesday": "09:00 - 17:00",
+    "opening_hours_wednesday": "09:00 - 17:00",
+    "opening_hours_thursday": "09:00 - 17:00",
+    "opening_hours_friday": "09:00 - 17:00",
+    "rating_text": "Rated 5 stars",
+    "stars_text": "4.7 based on 58 reviews",
     "stars_link": "shopify://pages/reviews",
-    "testimonial_image": "shopify://shop_images/Untitled_13.png",
+    "testimonial_image": "shopify://shop_images/Pleated_customer_conservatory.jpg",
     "testimonial_button_link": "shopify://pages/reviews",
-    "appointment_button_link": "https://book.grampian-blinds.co.uk/",
-    "appointment_image": "shopify://shop_images/Screenshot_2025-05-16_115925.webp",
-    "newsletter_copy": "<p>We take safeguarding your details seriously. See our <a href=\"/pages/privacy-policy\" title=\"Privacy Policy\">privacy policy</a>.</p>",
-    "newsletter_image": "shopify://shop_images/PALMIRO-CHARTREUSE.webp",
-    "how_it_works_down_image": "shopify://shop_images/LL_2023_Vision_Firenze_Walnut_Liv_Open_2_Mail.jpg",
-    "favicon": "shopify://shop_images/favicon_rebrand.png",
+    "appointment_title": "The Right Fit, Every Time",
+    "appointment_button_link": "https://book.goldcrest-blinds.co.uk/",
+    "appointment_image": "shopify://shop_images/Screenshot_2025-05-16_115925.png",
+    "get_to_know_title": "Get to know Goldcrest Blinds",
+    "newsletter_copy": "<p>We take safeguarding your details seriously. See our <a href=\"/pages/privacy-policy\" title=\"Privacy Policy\">privacy policy</a>.<a href=\"/pages/privacy-policy\" title=\"Privacy Policy\">/pages/privacy-policy</a></p>",
+    "newsletter_image": "shopify://shop_images/blinds_for_bay.webp",
+    "how_it_works_down_image": "shopify://shop_images/Pleated_customer_conservatory.jpg",
+    "collection_header_button_url": "https://book.goldcrest-blinds.co.uk/",
+    "favicon": "shopify://shop_images/new_logo_-_trasparent_back.png",
     "facebook_url": "https://www.facebook.com/GoldcrestBlinds",
     "instagram_url": "https://www.instagram.com/goldcrestblinds/",
     "popup_image": "shopify://shop_images/Harper_Aqua_Kimbel_Damson_Curtain.jpg",
-    "popup_book_button_url": "https://book.grampian-blinds.co.uk",
+    "popup_book_button_url": "https://book.goldcrest-blinds.co.uk/",
     "popup_newsletter_terms_text": "<p>We take safeguarding your details seriously. See our <a href=\"/pages/privacy-policy\" title=\"Privacy Policy\">privacy policy</a>.</p>",
-    "announcement_bar_enabled": true,
+    "announcement_bar_enabled": false,
     "announcement_bar_text": "<p>Our showroom is currently closed for refurbishment. If you need assistance please call <a href=\"tel:01224662884\">01224 662 884</a></p>",
+    "404_button_url": "shopify://collections",
     "sections": {
       "header": {
         "type": "header",
         "settings": {
           "background_color": "#000000",
-          "logo": "shopify://shop_images/GC_Grampian_Horizontal_Reverse_RGB.svg",
           "button_text": "Request Your Free Appointment",
           "button_url": "https://book.grampian-blinds.co.uk/",
           "main_nav": "main-menu"
@@ -53,9 +62,9 @@
           "col_1_title": "Grampian Blinds",
           "col_1_menu": "footer",
           "col_2_title": "Our Offering",
-          "col_2_menu": "our-offering",
+          "col_2_menu": "",
           "col_3_title": "Get in Touch",
-          "col_3_menu": "footer-contact-us"
+          "col_3_menu": ""
         }
       }
     },
