@@ -77,21 +77,21 @@
         "collection_JdAqVE": {
           "type": "collection",
           "settings": {
-            "collection": "pleated-blinds-in-grampian",
+            "collection": "pleated-blinds",
             "custom_title": "Pleated Blinds"
           }
         },
         "collection_zHL7N7": {
           "type": "collection",
           "settings": {
-            "collection": "wooden-blinds-in-grampian",
+            "collection": "wood-blinds",
             "custom_title": "Wooden Blinds"
           }
         },
         "collection_EAWLWH": {
           "type": "collection",
           "settings": {
-            "collection": "vision-blinds-in-grampian",
+            "collection": "day-night-blinds",
             "custom_title": "Vision Blinds"
           }
         },
@@ -105,35 +105,35 @@
         "collection_rda9i3": {
           "type": "collection",
           "settings": {
-            "collection": "roman-blinds-in-grampian",
+            "collection": "roman-blinds",
             "custom_title": "Roman Blinds"
           }
         },
         "collection_ypx6cV": {
           "type": "collection",
           "settings": {
-            "collection": "perfect-fit-blinds-in-grampian",
+            "collection": "perfect-fit-blinds",
             "custom_title": "Perfect Fit Blinds"
           }
         },
         "collection_kE7HJL": {
           "type": "collection",
           "settings": {
-            "collection": "venetian-blinds-in-grampian",
+            "collection": "venetians",
             "custom_title": "Venetian Blinds"
           }
         },
         "collection_T4K9Qa": {
           "type": "collection",
           "settings": {
-            "collection": "conservatory-blinds-in-grampian",
+            "collection": "conservatory-blinds",
             "custom_title": "Conservatory Blinds"
           }
         },
         "collection_bQQzgC": {
           "type": "collection",
           "settings": {
-            "collection": "electric-blinds-in-grampian",
+            "collection": "electric-blinds",
             "custom_title": "Electric Blinds"
           }
         }
