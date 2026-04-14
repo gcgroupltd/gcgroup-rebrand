@@ -26,6 +26,11 @@ body.no-scroll {
   margin: 0 auto;
 }
 
+.main-page ul li {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
 .button {
   border-radius: 50px;
   text-decoration: none;
@@ -184,10 +189,48 @@ a.pagination__item:hover::after {
   display: none;
 }
 
-@media screen and (min-width: 860px) {
-  .header {
-    position: relative;
-  }
+.main-page {
+  padding: 40px 15px;
+}
+
+.main-page h1 {
+  font-size: 62px;
+  line-height: 80px;
+}
+
+.main-page h2 {
+  font-size: 29px;
+}
+
+.main-page h3 {
+  font-size: 22px;
+}
+
+.main-page .standard-container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.main-page p,
+.main-page a.link {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.main-page a.link {
+  color: inherit;
+  text-decoration: underline;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.main-page img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.header {
+  position: relative;
 }
 .header .standard-container {
   display: flex;
@@ -587,12 +630,21 @@ a.pagination__item:hover::after {
   }
 }
 .header__ctas a.button {
-  display: none;
+  display: block;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 14px;
+  padding: 15px;
 }
 @media screen and (min-width: 860px) {
   .header__ctas a.button {
-    display: block;
     margin-left: 15px;
+    position: relative;
+    right: unset;
+    bottom: unset;
+    font-size: inherit;
+    padding: 15px 25px;
   }
 }
 
@@ -865,7 +917,7 @@ a.pagination__item:hover::after {
 }
 .testimonial-slider__testimonials {
   padding: 20px 40px;
-  max-width: 100%;
+  max-width: calc(100% - 80px);
 }
 @media screen and (min-width: 860px) {
   .testimonial-slider__testimonials {
@@ -1396,6 +1448,13 @@ a.pagination__item:hover::after {
 .popup__email__content form label {
   font-size: 13px;
   left: 42px;
+  position: absolute;
+  top: 12px;
+  margin-bottom: 0;
+  pointer-events: none;
+  letter-spacing: 0.1rem;
+  transition: all 0.25s ease-in-out;
+  line-height: 1.5;
 }
 .popup__email__content form .field {
   max-width: 85%;
@@ -1427,6 +1486,16 @@ a.pagination__item:hover::after {
 }
 .popup__email__content form .newsletter-form-fw__field-wrapper {
   width: 100%;
+}
+.popup__email__content form .form__message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.popup__email__content form .form__message svg {
+  height: 35px;
+  margin-right: 10px;
 }
 .popup__email__image {
   order: 2;
@@ -1482,12 +1551,16 @@ a.pagination__item:hover::after {
 .blog-articles > div img, .blog-articles a img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  transition: all 0.25s ease-in-out;
 }
 .blog-articles > div h3, .blog-articles a h3 {
   color: #000;
   text-decoration: none;
+}
+.blog-articles a:hover img {
+  transform: scale(1.1);
 }
 .blog-articles__image {
   height: 100%;

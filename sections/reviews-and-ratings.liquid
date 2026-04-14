@@ -18,7 +18,7 @@
     --date-size: {{ section.settings.card_date_size }}px;
   "
 >
-  <div class="rr-inner page-width">
+  <div class="rr-inner standard-container">
     {%- if section.settings.header_style == 'single' -%}
       <!-- Single stars + text -->
       <div class="rr-top rr-top--single">
@@ -210,7 +210,7 @@
 
   <style>
       /* Scope with unique section ID to beat theme styles */
-      #reviews-{{ section.id }} .rr-inner { max-width: var(--page-width, 1200px); margin: 0 auto; position: relative; }
+      #reviews-{{ section.id }} .rr-inner { padding: 0 40px; margin: 0 auto; position: relative; }
       #reviews-{{ section.id }} { background: {{ section.settings.bg_color }}; padding: {{ section.settings.pad_y }}px 0; }
 
       /* Reviews Arrow Styling */
@@ -293,7 +293,7 @@
       }
 
       /* Card widths per breakpoint */
-      @media (min-width: 990px){ #reviews-{{ section.id }} .rr-card{ flex: 0 0 calc(33.333% - 11px); } }
+      @media (min-width: 990px){ #reviews-{{ section.id }} .rr-card{ flex: 0 0 calc(33.333% - 38px); } }
       @media (max-width: 989px) and (min-width: 641px){ #reviews-{{ section.id }} .rr-card{ flex: 0 0 49%; } }
       @media (max-width: 640px){ #reviews-{{ section.id }} .rr-card{ flex: 0 0 96%; scroll-snap-align:center; } }
 
