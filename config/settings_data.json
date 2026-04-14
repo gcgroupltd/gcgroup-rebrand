@@ -56,12 +56,12 @@
         "type": "footer",
         "settings": {
           "background_color": "#000000",
-          "col_1_title": "Grampian Blinds",
+          "col_1_title": "Baileys Blinds",
           "col_1_menu": "footer",
           "col_2_title": "Our Offering",
           "col_2_menu": "our-offering",
-          "col_3_title": "Get in Touch",
-          "col_3_menu": ""
+          "col_3_title": "Our Information",
+          "col_3_menu": "our-information"
         }
       }
     },

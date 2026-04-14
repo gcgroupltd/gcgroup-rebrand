@@ -91,28 +91,28 @@
         "collection_EAWLWH": {
           "type": "collection",
           "settings": {
-            "collection": "vision-blinds-in-grampian",
-            "custom_title": "Vision Blinds"
+            "collection": "newcastle-day-night-blinds",
+            "custom_title": "Day & Night"
           }
         },
         "collection_gVx7BJ": {
           "type": "collection",
           "settings": {
-            "collection": "curtains",
+            "collection": "newcastle-curtains",
             "custom_title": "Curtains"
           }
         },
         "collection_rda9i3": {
           "type": "collection",
           "settings": {
-            "collection": "roman-blinds-in-grampian",
+            "collection": "newcastle-roman-blinds",
             "custom_title": "Roman Blinds"
           }
         },
         "collection_ypx6cV": {
           "type": "collection",
           "settings": {
-            "collection": "perfect-fit-blinds-in-grampian",
+            "collection": "newcastle-perfect-fit-blinds",
             "custom_title": "Perfect Fit Blinds"
           }
         },
@@ -127,7 +127,7 @@
         "collection_T4K9Qa": {
           "type": "collection",
           "settings": {
-            "collection": "conservatory-blinds-in-grampian",
+            "collection": "newcastle-conservatory-blinds",
             "custom_title": "Conservatory Blinds"
           }
         },
@@ -135,7 +135,8 @@
           "type": "collection",
           "settings": {
             "collection": "electric-blinds-in-grampian",
-            "custom_title": "Electric Blinds"
+            "custom_title": "Electric Blinds",
+            "custom_image": "shopify://shop_images/electric.webp"
           }
         }
       },
