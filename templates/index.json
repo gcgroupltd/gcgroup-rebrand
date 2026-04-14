@@ -12,40 +12,40 @@
     "intro_banner_eeddTE": {
       "type": "intro-banner",
       "blocks": {
+        "image_aVez4m": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_osc5r4osc5r4osc5.png"
+          }
+        },
         "image_cJNEpf": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Kassala_Emerald_Kitchen_Roller.webp"
+            "image": "shopify://shop_images/arturo_porcelain.jpg"
           }
         },
         "image_P9JTMw": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/grampian-conservatory.webp"
-          }
-        },
-        "image_9TJm4T": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Harper_Aqua_Kimbel_Damson_Curtain.jpg"
+            "image": "shopify://shop_images/Montana_-_Pure_White_001_A_9ff13209-be4a-4c08-8f8c-0efd504af94d.jpg"
           }
         }
       },
       "block_order": [
+        "image_aVez4m",
         "image_cJNEpf",
-        "image_P9JTMw",
-        "image_9TJm4T"
+        "image_P9JTMw"
       ],
       "name": "Intro Banner",
       "settings": {
         "background_color": "#de162a",
         "text_color": "#ffffff",
-        "heading": "Fresh New Look This Spring!",
-        "content": "Enjoy a free appointment where our experts help you choose the perfect style.",
+        "heading": "Freshen Up for Spring",
+        "content": "Treat your home to beautiful made-to-measure blinds. Book your appointment now!",
         "button_one_text": "Blinds",
         "button_one_link": "shopify://collections/blinds",
         "button_two_text": "Shutters",
-        "button_two_link": "shopify://collections/window-shutters-in-grampian",
+        "button_two_link": "shopify://collections/solid-shutters",
         "button_three_text": "Curtains",
         "button_three_link": "shopify://collections/curtains"
       }
@@ -120,8 +120,7 @@
           "type": "collection",
           "settings": {
             "collection": "venetian-blinds-in-grampian",
-            "custom_title": "Venetian Blinds",
-            "custom_image": "shopify://shop_images/Venetian_FireEngineRed_Kids_Bedroom-min.jpg"
+            "custom_title": "Venetian Blinds"
           }
         },
         "collection_T4K9Qa": {
