@@ -45,7 +45,7 @@
         "button_one_text": "Blinds",
         "button_one_link": "shopify://collections/blinds",
         "button_two_text": "Shutters",
-        "button_two_link": "shopify://collections/solid-shutters",
+        "button_two_link": "shopify://collections/shutters",
         "button_three_text": "Curtains",
         "button_three_link": "shopify://collections/curtains"
       }
@@ -56,21 +56,21 @@
         "collection_XVwXGK": {
           "type": "collection",
           "settings": {
-            "collection": "roller-blinds-in-grampian",
+            "collection": "roller-blinds",
             "custom_title": "Roller Blinds"
           }
         },
         "collection_efjXEE": {
           "type": "collection",
           "settings": {
-            "collection": "vertical-blinds-in-grampian",
+            "collection": "vertical-blinds",
             "custom_title": "Vertical Blinds"
           }
         },
         "collection_dQ9rE6": {
           "type": "collection",
           "settings": {
-            "collection": "window-shutters-in-grampian",
+            "collection": "shutters",
             "custom_title": "Shutters"
           }
         },
