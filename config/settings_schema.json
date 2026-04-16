@@ -270,16 +270,16 @@
         "default": "GTM-XXXXXX"
       },
       {
-        "type": "link_list",
-        "id": "main_navigation_menu",
-        "label": "Main Navigation Menu",
-        "info": "This manages the main navigation menu and the get to know us block."
-      },
-      {
         "type": "text",
         "id": "booking_page_url",
         "label": "Booking Page URL",
-        "info": "This is used for GA redirects in the head."
+        "info": "This is used for GA redirects"
+      },
+      {
+        "type": "link_list",
+        "id": "main_navigation_menu",
+        "label": "Main Navigation Menu",
+        "info": "This menu is used in the header and for the Get to Know us connection"
       }
     ]
   },
@@ -429,5 +429,5 @@
         "info": "This code will be injected into the <head> of your site. Perfect for things like Google Analytics or Facebook Pixel."
       },
     ]
-  },
+  }
 ]
