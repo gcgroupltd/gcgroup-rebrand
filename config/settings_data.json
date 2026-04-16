@@ -24,6 +24,8 @@
     "how_it_works_down_image": "shopify://shop_images/ARENA_24_CURTAIN-DAISY-CHAIN-SHADOW-PORTRAIT-03_1.jpg",
     "collection_header_button_url": "https://book.baileys-blinds.co.uk/",
     "favicon": "shopify://shop_images/favicon_rebrand.png",
+    "main_navigation_menu": "main-menu-1",
+    "booking_page_url": "https://book.baileys-blinds.co.uk/",
     "facebook_url": "https://www.facebook.com/GoldcrestBlinds",
     "instagram_url": "https://www.instagram.com/goldcrestblinds/",
     "popup_image": "shopify://shop_images/Harper_Aqua_Kimbel_Damson_Curtain_1.jpg",
@@ -32,7 +34,6 @@
     "announcement_bar_enabled": false,
     "announcement_bar_text": "<p>Our showroom is currently closed for refurbishment. If you need assistance please call <a href=\"tel:01224662884\">01224 662 884</a></p>",
     "404_button_url": "shopify://collections",
-    "booking_page_url": "https://book.baileys-blinds.co.uk/",
     "sections": {
       "header": {
         "type": "header",
@@ -40,8 +41,7 @@
           "background_color": "#000000",
           "logo": "shopify://shop_images/GC_Baileys_Horizontal_Reverse_RGB.svg",
           "button_text": "Request Your Free Appointment",
-          "button_url": "https://book.baileys-blinds.co.uk/",
-          "main_nav": "main-menu-1"
+          "button_url": "https://book.baileys-blinds.co.uk/"
         }
       },
       "cta-banner": {
