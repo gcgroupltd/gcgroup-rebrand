@@ -29,6 +29,7 @@
     "how_it_works_down_image": "shopify://shop_images/Pleated_customer_conservatory.jpg",
     "collection_header_button_url": "https://book.goldcrest-blinds.co.uk/",
     "favicon": "shopify://shop_images/new_logo_-_trasparent_back.png",
+    "main_navigation_menu": "main-menu",
     "facebook_url": "https://www.facebook.com/GoldcrestBlinds",
     "instagram_url": "https://www.instagram.com/goldcrestblinds/",
     "popup_image": "shopify://shop_images/Harper_Aqua_Kimbel_Damson_Curtain.jpg",
@@ -44,8 +45,7 @@
           "background_color": "#000000",
           "logo": "shopify://shop_images/GC_Goldcrest_Horizontal_Reverse_RGB.svg",
           "button_text": "Request Your Free Appointment",
-          "button_url": "https://book.grampian-blinds.co.uk/",
-          "main_nav": "main-menu"
+          "button_url": "https://book.grampian-blinds.co.uk/"
         }
       },
       "cta-banner": {
