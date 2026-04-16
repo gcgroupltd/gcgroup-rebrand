@@ -15,19 +15,19 @@
         "image_cJNEpf": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Kassala_Emerald_Kitchen_Roller.webp"
+            "image": "shopify://shop_images/ARENA_2024_ROLLER_BLINDS_SHONA_MIDNIGHT-2_5aac5af9-f059-4c19-b91d-482e779440be.jpg"
           }
         },
         "image_P9JTMw": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/grampian-conservatory.webp"
+            "image": "shopify://shop_images/Montana_-_Pure_White_001_E_1_bbc82e6d-e3f5-4ebe-b1be-ee96bec018c7.jpg"
           }
         },
         "image_9TJm4T": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Harper_Aqua_Kimbel_Damson_Curtain.jpg"
+            "image": "shopify://shop_images/ARENA_24_CURTAIN-DAISY-CHAIN-SHADOW-PORTRAIT-03_1.jpg"
           }
         }
       },
@@ -40,14 +40,14 @@
       "settings": {
         "background_color": "#de162a",
         "text_color": "#ffffff",
-        "heading": "Fresh New Look This Spring!",
-        "content": "Enjoy a free appointment where our experts help you choose the perfect style.",
+        "heading": "Freshen Up for Spring",
+        "content": "Treat your home to beautiful made-to-measure blinds. Book your appointment now!",
         "button_one_text": "Blinds",
-        "button_one_link": "shopify://collections/blinds",
+        "button_one_link": "shopify://collections/newcastle-blinds",
         "button_two_text": "Shutters",
-        "button_two_link": "shopify://collections/window-shutters-in-grampian",
+        "button_two_link": "shopify://collections/newcastle-shutters",
         "button_three_text": "Curtains",
-        "button_three_link": "shopify://collections/curtains"
+        "button_three_link": "shopify://collections/newcastle-shutters"
       }
     },
     "collection_grid_DetCqr": {
@@ -56,63 +56,63 @@
         "collection_XVwXGK": {
           "type": "collection",
           "settings": {
-            "collection": "roller-blinds-in-grampian",
+            "collection": "roller-blinds",
             "custom_title": "Roller Blinds"
           }
         },
         "collection_efjXEE": {
           "type": "collection",
           "settings": {
-            "collection": "vertical-blinds-in-grampian",
+            "collection": "newcastle-vertical-blinds",
             "custom_title": "Vertical Blinds"
           }
         },
         "collection_dQ9rE6": {
           "type": "collection",
           "settings": {
-            "collection": "window-shutters-in-grampian",
+            "collection": "newcastle-shutters",
             "custom_title": "Shutters"
           }
         },
         "collection_JdAqVE": {
           "type": "collection",
           "settings": {
-            "collection": "pleated-blinds-in-grampian",
+            "collection": "newcastle-pleated-blinds",
             "custom_title": "Pleated Blinds"
           }
         },
         "collection_zHL7N7": {
           "type": "collection",
           "settings": {
-            "collection": "wooden-blinds-in-grampian",
+            "collection": "newcastle-wooden-blinds",
             "custom_title": "Wooden Blinds"
           }
         },
         "collection_EAWLWH": {
           "type": "collection",
           "settings": {
-            "collection": "vision-blinds-in-grampian",
-            "custom_title": "Vision Blinds"
+            "collection": "newcastle-day-night-blinds",
+            "custom_title": "Day & Night"
           }
         },
         "collection_gVx7BJ": {
           "type": "collection",
           "settings": {
-            "collection": "curtains",
+            "collection": "newcastle-curtains",
             "custom_title": "Curtains"
           }
         },
         "collection_rda9i3": {
           "type": "collection",
           "settings": {
-            "collection": "roman-blinds-in-grampian",
+            "collection": "newcastle-roman-blinds",
             "custom_title": "Roman Blinds"
           }
         },
         "collection_ypx6cV": {
           "type": "collection",
           "settings": {
-            "collection": "perfect-fit-blinds-in-grampian",
+            "collection": "newcastle-perfect-fit-blinds",
             "custom_title": "Perfect Fit Blinds"
           }
         },
@@ -127,7 +127,7 @@
         "collection_T4K9Qa": {
           "type": "collection",
           "settings": {
-            "collection": "conservatory-blinds-in-grampian",
+            "collection": "newcastle-conservatory-blinds",
             "custom_title": "Conservatory Blinds"
           }
         },
@@ -135,7 +135,8 @@
           "type": "collection",
           "settings": {
             "collection": "electric-blinds-in-grampian",
-            "custom_title": "Electric Blinds"
+            "custom_title": "Electric Blinds",
+            "custom_image": "shopify://shop_images/electric.webp"
           }
         }
       },
