@@ -5,7 +5,7 @@
   {% assign slides = shop.metaobjects.get_to_know_slides.values | sort: 'order' %}
   {% assign get_to_know_count = slides.size %}
 {% else %}
-  {% assign main_menu = linklists['main-menu'].links %}
+  {% assign main_menu = settings.main_navigation_menu.links %}
   {% assign current_category = null %}
 
   {% for category in main_menu %}
@@ -15,7 +15,8 @@
           {% assign current_category = category %}
         {% endif %}
       {% endfor %}
-    {% endfor %}
+    {% endfor -%}
+    in
   {% endfor %}
 
   {% if current_category %}
