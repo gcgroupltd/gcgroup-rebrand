@@ -268,6 +268,18 @@
         "id": "google_tag_id",
         "label": "Google Tag Manager ID",
         "default": "GTM-XXXXXX"
+      },
+      {
+        "type": "text",
+        "id": "booking_page_url",
+        "label": "Booking Page URL",
+        "info": "This is used for GA redirects"
+      },
+      {
+        "type": "link_list",
+        "id": "main_navigation_menu",
+        "label": "Main Navigation Menu",
+        "info": "This menu is used in the header and for the Get to Know us connection"
       }
 ]
   },
@@ -417,15 +429,5 @@
         "info": "This code will be injected into the <head> of your site. Perfect for things like Google Analytics or Facebook Pixel."
       },
     ]
-  },
-  {
-    "name": "Booking Details",
-    "settings": [
-      {
-      "type": "text",
-      "id": "booking_page_url",
-      "label": "Booking Page URL"
-    }
-   ]
   }
 ]
