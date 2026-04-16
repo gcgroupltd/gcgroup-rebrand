@@ -9,6 +9,7 @@
   {% assign current_category = null %}
 
   {% for category in main_menu %}
+    <p>TEST</p>
     {% for sublink in category.links %}
       {% for child in sublink.links %}
         {% if child.type == 'collection_link' and child.object.handle == collection.handle %}
@@ -19,6 +20,7 @@
   {% endfor %}
 
   {% if current_category %}
+    <p>TEST 2</p>
     {% for sublink in current_category.links %}
       {% for child in sublink.links %}
         {% if child.type == 'collection_link' and child.object %}
