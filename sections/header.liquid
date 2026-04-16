@@ -82,7 +82,7 @@
   <div class="mobile-nav-wrapper" style="background-color: {{ section.settings.background_color }}">
     <nav class="standard-container main-nav">
       <ul class="menu-root">
-        {% for link in section.settings.main_nav.links %}
+        {% for link in settings.main_navigation_menu.links %}
           <li class="menu-item">
             {% if link.links != blank %}
               <div class="mega-menu">
@@ -198,12 +198,6 @@
       "type": "url",
       "id": "button_url",
       "label": "Button URL"
-    },
-    {
-      "type": "link_list",
-      "id": "main_nav",
-      "label": "Main Navigation Menu",
-      "default": "main-menu"
     }
   ]
 }

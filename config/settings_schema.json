@@ -268,8 +268,20 @@
         "id": "google_tag_id",
         "label": "Google Tag Manager ID",
         "default": "GTM-XXXXXX"
+      },
+      {
+        "type": "link_list",
+        "id": "main_navigation_menu",
+        "label": "Main Navigation Menu",
+        "info": "This manages the main navigation menu and the get to know us block."
+      },
+      {
+        "type": "text",
+        "id": "booking_page_url",
+        "label": "Booking Page URL",
+        "info": "This is used for GA redirects in the head."
       }
-]
+    ]
   },
   {
     "name": "Social Media",
@@ -418,14 +430,4 @@
       },
     ]
   },
-  {
-    "name": "Booking Details",
-    "settings": [
-      {
-      "type": "text",
-      "id": "booking_page_url",
-      "label": "Booking Page URL"
-    }
-   ]
-  }
 ]
