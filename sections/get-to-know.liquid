@@ -8,35 +8,39 @@
   {% assign main_menu = linklists['main-menu'].links %}
   {% assign current_category = null %}
 
+  {%- comment -%} FIND CURRENT CATEGORY {%- endcomment -%}
   {% for category in main_menu %}
     {% for sublink in category.links %}
       {% for child in sublink.links %}
-        {% if child.type == 'collection_link' and child.object.handle == collection.handle %}
+
+        {% assign child_handle = child.url | split: '/collections/' | last | split: '?' | first %}
+
+        {% if child_handle == collection.handle %}
           {% assign current_category = category %}
         {% endif %}
+
       {% endfor %}
     {% endfor %}
   {% endfor %}
 
+  {%- comment -%} BUILD SLIDES FROM CATEGORY {%- endcomment -%}
   {% if current_category %}
     {% for sublink in current_category.links %}
       {% for child in sublink.links %}
-        {% if child.type == 'collection_link' and child.object %}
-          {% assign temp_array = child.object.handle | split: ',' %}
 
-          {% for handle in temp_array %}
-            {% if handle != collection.handle %}
-              {% assign slides = slides | concat: temp_array %}
-            {% endif %}
-          {% endfor %}
+        {% assign handle = child.url | split: '/collections/' | last | split: '?' | first %}
+
+        {% if handle != blank and handle != collection.handle %}
+          {% assign slides = slides | push: handle %}
         {% endif %}
+
       {% endfor %}
     {% endfor %}
   {% endif %}
 
+  {%- comment -%} FALLBACK LOGIC {%- endcomment -%}
   {% if current_category == null %}
     {% assign current_type = '' %}
-
     {% assign collection_title_down = collection.title | downcase %}
 
     {% if collection_title_down contains 'blind' %}
@@ -56,10 +60,13 @@
         {% if title_down contains current_type_down %}
           {% for child in sublink.links %}
             {% for grandchild in child.links %}
-              {% if grandchild.type == 'collection_link' %}
-                {% assign temp_array = grandchild.object.handle | split: ',' %}
-                {% assign slides = slides | concat: temp_array %}
+
+              {% assign handle = grandchild.url | split: '/collections/' | last | split: '?' | first %}
+
+              {% if handle != blank %}
+                {% assign slides = slides | push: handle %}
               {% endif %}
+
             {% endfor %}
           {% endfor %}
         {% endif %}
@@ -70,27 +77,10 @@
   {% assign get_to_know_count = slides.size %}
 {% endif %}
 
-<p>Slides count: {{ slides.size }}</p>
-<p>Collection handle: {{ collection.handle }}</p>
-
-{% for category in linklists['main-menu'].links %}
-  {% for sublink in category.links %}
-    {% for child in sublink.links %}
-      <p>
-        {{ child.title }} |
-        type: {{ child.type }} |
-        url: {{ child.url }} |
-        handle: {{ child.object.handle }}
-      </p>
-    {% endfor %}
-  {% endfor %}
-{% endfor %}
-
-
 <section class="get-to-know" style="padding: 30px 0;">
   <div
     class="standard-container"
-    style="background-color: {{ section.settings.background_color }}; max-widtH: calc(1520px - 80px); padding: 40px;"
+    style="background-color: {{ section.settings.background_color }}; max-width: calc(1520px - 80px); padding: 40px;"
   >
     <div class="get-to-know__head">
       <h2>{{ section.settings.title }}</h2>
@@ -106,20 +96,18 @@
         {% for s in slides %}
           {% assign collection_obj = collections[s] %}
 
-          <div class="get-to-know__slide">
-            <div class="get-to-know__slide__image">
-              {% if collection_obj.image %}
-                <img
-                  src="{{ collection_obj.image | image_url }}"
-                  alt="{{ collection_obj.metafields.custom.collection_page_title }}"
-                >
-              {% else %}
-                <img src="{{ s.image | image_url }}" alt="{{ s.title }}">
-              {% endif %}
-            </div>
+          {% if collection_obj %}
+            <div class="get-to-know__slide">
+              <div class="get-to-know__slide__image">
+                {% if collection_obj.image %}
+                  <img
+                    src="{{ collection_obj.image | image_url }}"
+                    alt="{{ collection_obj.metafields.custom.collection_page_title }}"
+                  >
+                {% endif %}
+              </div>
 
-            <div class="get-to-know__slide__content">
-              {% if collection_obj %}
+              <div class="get-to-know__slide__content">
                 {% if collection_obj.metafields.custom.collection_page_title == blank %}
                   <h3>{{ collection_obj.title }}</h3>
                 {% else %}
@@ -131,13 +119,9 @@
                 <a href="{{ collection_obj.url }}">
                   View {{ collection_obj.metafields.custom.collection_page_title | default: collection_obj.title }}
                 </a>
-              {% else %}
-                <h3>{{ s.title }}</h3>
-                <p>{{ s.content }}</p>
-                <a href="{{ s.link_url }}">{{ s.link_text }}</a>
-              {% endif %}
+              </div>
             </div>
-          </div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
