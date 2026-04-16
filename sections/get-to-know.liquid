@@ -70,6 +70,20 @@
   {% assign get_to_know_count = slides.size %}
 {% endif %}
 
+{% for category in linklists['main-menu'].links %}
+  {% for sublink in category.links %}
+    {% for child in sublink.links %}
+      <p>
+        {{ child.title }} |
+        type: {{ child.type }} |
+        url: {{ child.url }} |
+        handle: {{ child.object.handle }}
+      </p>
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
+
 <section class="get-to-know" style="padding: 30px 0;">
   <div
     class="standard-container"
