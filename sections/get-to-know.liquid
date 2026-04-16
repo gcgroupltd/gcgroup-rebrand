@@ -70,9 +70,6 @@
   {% assign get_to_know_count = slides.size %}
 {% endif %}
 
-<p>Slides count: {{ slides.size }}</p>
-<p>Collection handle: {{ collection.handle }}</p>
-
 {% for category in linklists['main-menu'].links %}
   {% for sublink in category.links %}
     {% for child in sublink.links %}
